@@ -1,0 +1,3427 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../public/aldoc_logo.svg" alt="Documentation">
+            Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="O:Codeunit::System#Email#Email">
+  <h1>Codeunit Email</h1>
+
+
+<div class="font-style-italic">ID 8901</div>
+<div class="font-style-italic">Namespace: System.Email</div>
+
+
+
+
+  	<div class="summaryHolder">
+  		<div class="summary">
+			<p>Provides functionality to create and send emails.</p>
+
+  		</div>
+  	</div>
+
+
+
+  	<h2 id="properties">Properties</h2>
+
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Value</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  					<td>Access</td>
+  					<td class="font-style-italic">
+							Public
+  					</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	<h2 id="methods">Methods</h2>
+   <h3 class="memberNameHolder">SaveAsDraft</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Saves a draft email in the Outbox.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SaveAsDraft(EmailMessage: Codeunit &quot;Email Message&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to save.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">SaveAsDraft</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Saves a draft email in the Outbox.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SaveAsDraft(EmailMessage: Codeunit &quot;Email Message&quot;, var EmailOutbox: Record &quot;Email Outbox&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to save.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailOutbox
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Outbox&quot;                 </td>
+   							<td>
+								<p>The created outbox entry.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">SaveAsDraft</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Saves a draft email in the Outbox.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SaveAsDraft(EmailMessage: Codeunit &quot;Email Message&quot;, EmailAccountId: Guid, EmailConnector: Enum &quot;Email Connector&quot;, var EmailOutbox: Record &quot;Email Outbox&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to save.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccountId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The email account ID for sending.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailConnector
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Connector.html">System.Email.&quot;Email Connector&quot;</a>                 </td>
+   							<td>
+								<p>The email connector for sending.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailOutbox
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Outbox&quot;                 </td>
+   							<td>
+								<p>The created outbox entry.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">Enqueue</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Enqueues an email to be sent in the background.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Enqueue(EmailMessage: Codeunit &quot;Email Message&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>The default account will be used for sending the email.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Enqueue</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Enqueues an email to be sent in the background.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Enqueue(EmailMessage: Codeunit &quot;Email Message&quot;, NotBefore: DateTime)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								NotBefore
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>The date and time for sending the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>The default account will be used for sending the email.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Enqueue</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Enqueues an email to be sent in the background.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Enqueue(EmailMessage: Codeunit &quot;Email Message&quot;, EmailScenario: Enum &quot;Email Scenario&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailScenario
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Scenario.html">System.Email.&quot;Email Scenario&quot;</a>                 </td>
+   							<td>
+								<p>The scenario to use in order to determine the email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">Enqueue</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Enqueues an email to be sent in the background.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Enqueue(EmailMessage: Codeunit &quot;Email Message&quot;, EmailScenario: Enum &quot;Email Scenario&quot;, NotBefore: DateTime)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailScenario
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Scenario.html">System.Email.&quot;Email Scenario&quot;</a>                 </td>
+   							<td>
+								<p>The scenario to use in order to determine the email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								NotBefore
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>The date and time for sending the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">Enqueue</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Enqueues an email to be sent in the background.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Enqueue(EmailMessage: Codeunit &quot;Email Message&quot;, EmailAccount: Record &quot;Email Account&quot; temporary)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccount
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Account&quot; temporary                 </td>
+   							<td>
+								<p>The email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Both &quot;Account Id&quot; and Connector fields need to be set on the <code>EmailAccount</code> parameter.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Enqueue</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Enqueues an email to be sent in the background.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Enqueue(EmailMessage: Codeunit &quot;Email Message&quot;, EmailAccount: Record &quot;Email Account&quot; temporary, NotBefore: DateTime)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccount
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Account&quot; temporary                 </td>
+   							<td>
+								<p>The email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								NotBefore
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>The earliest date and time for sending the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">Enqueue</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Enqueues an email to be sent in the background.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Enqueue(EmailMessage: Codeunit &quot;Email Message&quot;, EmailAccountId: Guid, EmailConnector: Enum &quot;Email Connector&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccountId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailConnector
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Connector.html">System.Email.&quot;Email Connector&quot;</a>                 </td>
+   							<td>
+								<p>The email connector to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">Enqueue</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Enqueues an email to be sent in the background.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Enqueue(EmailMessage: Codeunit &quot;Email Message&quot;, EmailAccountId: Guid, EmailConnector: Enum &quot;Email Connector&quot;, NotBefore: DateTime)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccountId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailConnector
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Connector.html">System.Email.&quot;Email Connector&quot;</a>                 </td>
+   							<td>
+								<p>The email connector to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								NotBefore
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>The date and time for sending the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">Send</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends the email in the current session.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Send(EmailMessage: Codeunit &quot;Email Message&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the email was successfully sent; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The default account will be used for sending the email.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Send</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends the email in the current session.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Send(EmailMessage: Codeunit &quot;Email Message&quot;, EmailScenario: Enum &quot;Email Scenario&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailScenario
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Scenario.html">System.Email.&quot;Email Scenario&quot;</a>                 </td>
+   							<td>
+								<p>The scenario to use in order to determine the email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the email was successfully sent; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">Send</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends the email in the current session.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Send(EmailMessage: Codeunit &quot;Email Message&quot;, EmailAccount: Record &quot;Email Account&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccount
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Account&quot; temporary                 </td>
+   							<td>
+								<p>The email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the email was successfully sent; otherwise - false</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Both &quot;Account Id&quot; and Connector fields need to be set on the <code>EmailAccount</code> parameter.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Send</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends the email in the current session.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Send(EmailMessage: Codeunit &quot;Email Message&quot;, EmailAccountId: Guid, EmailConnector: Enum &quot;Email Connector&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccountId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailConnector
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Connector.html">System.Email.&quot;Email Connector&quot;</a>                 </td>
+   							<td>
+								<p>The email connector to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the email was successfully sent; otherwise - false</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">Reply</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a reply to an external message id in the foreground.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Reply(EmailMessage: Codeunit &quot;Email Message&quot;, ExternalId: Text, EmailAccountId: Guid, EmailConnector: Enum &quot;Email Connector&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message with the details of the recipients and reply to be added.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ExternalId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The external message id that is used to correlate and send the reply.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccountId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailConnector
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Connector.html">System.Email.&quot;Email Connector&quot;</a>                 </td>
+   							<td>
+								<p>The email connector to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if sent</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">ReplyAll</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a reply to an external message id to all recipients on that email in the foreground.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure ReplyAll(EmailMessage: Codeunit &quot;Email Message&quot;, ExternalId: Text, EmailAccountId: Guid, EmailConnector: Enum &quot;Email Connector&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message with the details of the recipients and reply to be added.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ExternalId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The external message id that is used to correlate and send the reply.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccountId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailConnector
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Connector.html">System.Email.&quot;Email Connector&quot;</a>                 </td>
+   							<td>
+								<p>The email connector to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if sent</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">EnqueueReply</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a reply to an external message id in the background.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure EnqueueReply(EmailMessage: Codeunit &quot;Email Message&quot;, ExternalId: Text, EmailAccountId: Guid, EmailConnector: Enum &quot;Email Connector&quot;, var EmailOutbox: Record &quot;Email Outbox&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message with the details of the recipients and reply to be added.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ExternalId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The external message id that is used to correlate and send the reply.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccountId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailConnector
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Connector.html">System.Email.&quot;Email Connector&quot;</a>                 </td>
+   							<td>
+								<p>The email connector to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailOutbox
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Outbox&quot;                 </td>
+   							<td>
+								<p>The email outbox which is set up for sending in the background.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">EnqueueReplyAll</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a reply to an external message id to all recipients on that email in the foreground.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure EnqueueReplyAll(EmailMessage: Codeunit &quot;Email Message&quot;, ExternalId: Text, EmailAccountId: Guid, EmailConnector: Enum &quot;Email Connector&quot;, var EmailOutbox: Record &quot;Email Outbox&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message with the details of the recipients and reply to be added.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ExternalId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The external message id that is used to correlate and send the reply.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccountId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailConnector
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Connector.html">System.Email.&quot;Email Connector&quot;</a>                 </td>
+   							<td>
+								<p>The email connector to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailOutbox
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Outbox&quot;                 </td>
+   							<td>
+								<p>The email outbox which is set up for sending in the background.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">RetrieveEmails</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Retrieves emails from the email account.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure RetrieveEmails(EmailAccountId: Guid, EmailConnector: Enum &quot;Email Connector&quot;, var EmailInbox: Record &quot;Email Inbox&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailAccountId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailConnector
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Connector.html">System.Email.&quot;Email Connector&quot;</a>                 </td>
+   							<td>
+								<p>The email connector to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailInbox
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Inbox&quot;                 </td>
+   							<td>
+								<p>The return record of all new emails that were retrieved.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">MarkAsRead</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Marks the specified email as read.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure MarkAsRead(EmailAccountId: Guid, EmailConnector: Enum &quot;Email Connector&quot;, ExternalId: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailAccountId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email account to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailConnector
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Connector.html">System.Email.&quot;Email Connector&quot;</a>                 </td>
+   							<td>
+								<p>The email connector to use for sending the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ExternalId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The external message id that is used to correlate and mark as read.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OpenInEditor</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Opens an email message in &quot;Email Editor&quot; page.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure OpenInEditor(EmailMessage: Codeunit &quot;Email Message&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OpenInEditor</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Opens an email message in &quot;Email Editor&quot; page.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure OpenInEditor(EmailMessage: Codeunit &quot;Email Message&quot;, EmailScenario: Enum &quot;Email Scenario&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailScenario
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Scenario.html">System.Email.&quot;Email Scenario&quot;</a>                 </td>
+   							<td>
+								<p>The scenario to use in order to determine the email account to use  on the page.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OpenInEditor</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Opens an email message in &quot;Email Editor&quot; page.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure OpenInEditor(EmailMessage: Codeunit &quot;Email Message&quot;, EmailAccount: Record &quot;Email Account&quot; temporary)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccount
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Account&quot; temporary                 </td>
+   							<td>
+								<p>The email account to fill in.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Both &quot;Account Id&quot; and Connector fields need to be set on the <code>EmailAccount</code> parameter.</p>
+
+   </div>
+   <h3 class="memberNameHolder">OpenInEditor</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Opens an email message in &quot;Email Editor&quot; page.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure OpenInEditor(EmailMessage: Codeunit &quot;Email Message&quot;, EmailAccountId: Guid, EmailConnector: Enum &quot;Email Connector&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccountId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email account to use on the page.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailConnector
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Connector.html">System.Email.&quot;Email Connector&quot;</a>                 </td>
+   							<td>
+								<p>The email connector to use on the page.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OpenInEditorModally</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Opens an email message in &quot;Email Editor&quot; page modally.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure OpenInEditorModally(EmailMessage: Codeunit &quot;Email Message&quot;): Enum &quot;Email Action&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="../Enum/System.Email.Email-Action.html">System.Email.&quot;Email Action&quot;</a>               </td>
+   						<td>
+							<p>The action that the user performed with the email message.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">OpenInEditorModally</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Opens an email message in &quot;Email Editor&quot; page modally.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure OpenInEditorModally(EmailMessage: Codeunit &quot;Email Message&quot;, EmailScenario: Enum &quot;Email Scenario&quot;): Enum &quot;Email Action&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailScenario
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Scenario.html">System.Email.&quot;Email Scenario&quot;</a>                 </td>
+   							<td>
+								<p>The scenario to use in order to determine the email account to use  on the page.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="../Enum/System.Email.Email-Action.html">System.Email.&quot;Email Action&quot;</a>               </td>
+   						<td>
+							<p>The action that the user performed with the email message.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">OpenInEditorModallyWithScenario</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Opens an email message in &quot;Email Editor&quot; page modally with scenario.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure OpenInEditorModallyWithScenario(EmailMessage: Codeunit &quot;Email Message&quot;, EmailAccount: Record &quot;Email Account&quot; temporary, Scenario: Enum &quot;Email Scenario&quot;): Enum &quot;Email Action&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccount
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Account&quot; temporary                 </td>
+   							<td>
+								<p>The email account to fill in.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scenario
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Scenario.html">System.Email.&quot;Email Scenario&quot;</a>                 </td>
+   							<td>
+								<p>The email scenario to fill in.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="../Enum/System.Email.Email-Action.html">System.Email.&quot;Email Action&quot;</a>               </td>
+   						<td>
+							<p>The action that the user performed with the email message.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Both &quot;Account Id&quot; and Connector fields need to be set on the <code>EmailAccount</code> parameter.</p>
+
+   </div>
+   <h3 class="memberNameHolder">OpenInEditorModally</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Opens an email message in &quot;Email Editor&quot; page modally.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure OpenInEditorModally(EmailMessage: Codeunit &quot;Email Message&quot;, EmailAccount: Record &quot;Email Account&quot; temporary): Enum &quot;Email Action&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccount
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Account&quot; temporary                 </td>
+   							<td>
+								<p>The email account to fill in.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="../Enum/System.Email.Email-Action.html">System.Email.&quot;Email Action&quot;</a>               </td>
+   						<td>
+							<p>The action that the user performed with the email message.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Both &quot;Account Id&quot; and Connector fields need to be set on the <code>EmailAccount</code> parameter.</p>
+
+   </div>
+   <h3 class="memberNameHolder">OpenInEditorModally</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Opens an email message in &quot;Email Editor&quot; page modally.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure OpenInEditorModally(EmailMessage: Codeunit &quot;Email Message&quot;, EmailAccountId: Guid, EmailConnector: Enum &quot;Email Connector&quot;): Enum &quot;Email Action&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message to use as payload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailAccountId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email account to use on the page.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailConnector
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Connector.html">System.Email.&quot;Email Connector&quot;</a>                 </td>
+   							<td>
+								<p>The email connector to use on the page.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="../Enum/System.Email.Email-Action.html">System.Email.&quot;Email Action&quot;</a>               </td>
+   						<td>
+							<p>The action that the user performed with the email message.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetSentEmailsForRecord</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the sent emails related to a record.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetSentEmailsForRecord(TableId: Integer, SystemId: Guid, var ResultSentEmails: Record &quot;Sent Email&quot; temporary)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								TableId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The table ID of the record.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SystemId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The system ID of the record.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ResultSentEmails
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Sent Email&quot; temporary                 </td>
+   							<td>
+								<p>The table ID of the record.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetSentEmailsForRecord</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the sent emails related to a record.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetSentEmailsForRecord(RecordVariant: Variant, var ResultSentEmails: Record &quot;Sent Email&quot; temporary)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RecordVariant
+   							</td>
+   							<td class="font-style-italic">
+Variant                 </td>
+   							<td>
+								<p>Source Record.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ResultSentEmails
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Sent Email&quot; temporary                 </td>
+   							<td>
+								<p>The sent email related to a record.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetEmailOutboxForRecord</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the outbox emails related to a record.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetEmailOutboxForRecord(RecordVariant: Variant, var ResultEmailOutbox: Record &quot;Email Outbox&quot; temporary)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RecordVariant
+   							</td>
+   							<td class="font-style-italic">
+Variant                 </td>
+   							<td>
+								<p>Source record.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ResultEmailOutbox
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Outbox&quot; temporary                 </td>
+   							<td>
+								<p>The outbox emails related to a record.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OpenSentEmails</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Open the sent emails page for a source record given by its table ID and system ID.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure OpenSentEmails(TableId: Integer, SystemId: Guid)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								TableId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The table ID of the record.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SystemId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The system ID of the record.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OpenSentEmails</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Open the sent emails page for a source record.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure OpenSentEmails(RecordVariant: Variant)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RecordVariant
+   							</td>
+   							<td class="font-style-italic">
+Variant                 </td>
+   							<td>
+								<p>Source record. Can be either Record, RecordRef or RecordId.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OpenSentEmails</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Open the sent emails page for a source record given by its table ID and system ID.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure OpenSentEmails(TableId: Integer, SystemId: Guid, NewerThanDate: DateTime)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								TableId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The table ID of the source record.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SystemId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The system ID of the source record.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								NewerThanDate
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>The date to which the sent emails are filtered.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetOutboxEmailRecordStatus</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the outbox email status.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetOutboxEmailRecordStatus(MessageId: Guid): Enum &quot;Email Status&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								MessageId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The MessageId of the record.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="../Enum/System.Email.Email-Status.html">System.Email.&quot;Email Status&quot;</a>               </td>
+   						<td>
+							<p>Email Status of the record.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AddRelation</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds a relation between an email message and a record.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddRelation(EmailMessage: Codeunit &quot;Email Message&quot;, TableId: Integer, SystemId: Guid, RelationType: Enum &quot;Email Relation Type&quot;, Origin: Enum &quot;Email Relation Origin&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message for which to create the relation.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TableId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The table ID of the record.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SystemId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The system ID of the record.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RelationType
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Relation-Type.html">System.Email.&quot;Email Relation Type&quot;</a>                 </td>
+   							<td>
+								<p>The relation type to set.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Origin
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Relation-Origin.html">System.Email.&quot;Email Relation Origin&quot;</a>                 </td>
+   							<td>
+								<p>The origin of when the relation is added to the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">RemoveRelation</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Removes a related record from an email message.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure RemoveRelation(EmailMessage: Codeunit &quot;Email Message&quot;, TableId: Integer, SystemId: Guid): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message for which to remove the relation.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TableId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The table ID of the record.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SystemId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The system ID of the record.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">HasRelations</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Check if email has any related records linked.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure HasRelations(EmailMessage: Codeunit &quot;Email Message&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message for which to check.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if it has a related records, otherwise false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AddDefaultAttachments</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds the default attachments of a scenario to the email message.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddDefaultAttachments(EmailMessage: Codeunit &quot;Email Message&quot;, EmailScenario: Enum &quot;Email Scenario&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>The email message for which to add the attachments.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailScenario
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Scenario.html">System.Email.&quot;Email Scenario&quot;</a>                 </td>
+   							<td>
+								<p>Includes the default attachments from this scenario.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+  	<h2 id="events">Events</h2>
+   <h3 class="memberNameHolder">OnShowSource</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event to show an email source record.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnShowSource(SourceTableId: Integer, SourceSystemId: Guid, var IsHandled: Boolean)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								SourceTableId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceSystemId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The system ID of the source record.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IsHandled
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>Out parameter to set if the event was handled.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnAfterAddRelation</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event to add additional relations based on added relation to emails.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnAfterAddRelation(EmailMessageId: Guid, TableId: Integer, SystemId: Guid, var RelatedSystemIds: Dictionary of [Integer, List of [Guid]])</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessageId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TableId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Record table id.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SystemId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>Record system id.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RelatedSystemIds
+   							</td>
+   							<td class="font-style-italic">
+Dictionary of [Integer, List of [Guid]]                 </td>
+   							<td>
+								<p>Dictionary that contains a list of system ids for each table id, allowing to add related records to the email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>A related record consists of a table id and a system id.</p>
+
+   </div>
+   <h3 class="memberNameHolder">OnAfterRemoveRelation</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event to execute code when relation is removed from email.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnAfterRemoveRelation(EmailMessageId: Guid, TableId: Integer, SystemId: Guid)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessageId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TableId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Record table id.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SystemId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>Record system id.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnGetBodyForTestEmail</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event to override the default email body for test messages.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnGetBodyForTestEmail(Connector: Enum &quot;Email Connector&quot;, AccountId: Guid, var Body: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Connector
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Email.Email-Connector.html">System.Email.&quot;Email Connector&quot;</a>                 </td>
+   							<td>
+								<p>The connector used to send the email message.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccountId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The account ID of the email account used to send the email message.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Body
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Out param to set the email body to a new value.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnFindRelatedAttachments</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event to get the names and IDs of attachments related to a source record.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnFindRelatedAttachments(SourceTableId: Integer, SourceSystemID: Guid, var EmailRelatedAttachments: Record &quot;Email Related Attachment&quot; temporary)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								SourceTableId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The table number of the source record.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceSystemID
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The system ID of the source record.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EmailRelatedAttachments
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Related Attachment&quot; temporary                 </td>
+   							<td>
+								<p>Out parameter to return attachments related to the source record.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnGetAttachment</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event that requests an attachment to be added to an email.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnGetAttachment(AttachmentTableID: Integer, AttachmentSystemID: Guid, MessageID: Guid)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								AttachmentTableID
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The table number of the attachment.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AttachmentSystemID
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The system ID of the attachment.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								MessageID
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email to add an attachment to.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnEnqueuedInOutbox</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event to implement additional validation after the email message has been enqueued in the email outbox.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnEnqueuedInOutbox(MessageId: Guid)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								MessageId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email that has been queued</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnEnqueuedReplyInOutbox</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event to implement additional validation after the email message has been enqueued in the email outbox.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnEnqueuedReplyInOutbox(MessageId: Guid)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								MessageId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The ID of the email that has been queued</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnAfterEmailSent</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event that notifies senders when the email has been sent successfully. This event is isolated.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False,True)]
+internal procedure OnAfterEmailSent(SentEmail: Record &quot;Sent Email&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								SentEmail
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Sent Email&quot;                 </td>
+   							<td>
+								<p>The record of the sent email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnAfterEmailSendFailed</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event that notifies senders when the email has been sent unsuccessfully. This event is isolated.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False,True)]
+internal procedure OnAfterEmailSendFailed(EmailOutbox: Record &quot;Email Outbox&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailOutbox
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Outbox&quot;                 </td>
+   							<td>
+								<p>The record of the email outbox that failed to send.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnBeforeOpenEmailEditor</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event that allows updating of the email message before the email editor opens.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnBeforeOpenEmailEditor(var EmailMessage: Codeunit &quot;Email Message&quot;, IsNewEmail: Boolean)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>Email message codeunit which is linked to the current email.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IsNewEmail
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>True if this is a newly created email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnBeforeSendEmail</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event that allows updating of the email message before the email is queued for sending.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnBeforeSendEmail(var EmailMessage: Codeunit &quot;Email Message&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>Email message codeunit which is linked to the current email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnBeforeReplyEmail</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event that allows updating of the email message before the email is queued for replying.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnBeforeReplyEmail(var EmailMessage: Codeunit &quot;Email Message&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Email.Email-Message.html">System.Email.&quot;Email Message&quot;</a>                 </td>
+   							<td>
+								<p>Email message codeunit which is linked to the current email.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnBeforeGetEmailAttachmentsByEmailScenarios</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Integration event that allows adding filters to the Email Scenario Attachments before they are retrieved.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnBeforeGetEmailAttachmentsByEmailScenarios(EmailScenarioAttachments: Record &quot;Email Scenario Attachments&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								EmailScenarioAttachments
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Email Scenario Attachments&quot;                 </td>
+   							<td>
+								<p>The record to add filters to.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+
+  	<h2 id="see-also">See also</h2>
+  	<ul>
+  			<li><p><a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object">Codeunit</a></p>
+</li>
+  	</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Made with <a href="https://go.microsoft.com/fwlink/?linkid=2247728">ALDoc</a> and <a href="https://dotnet.github.io/docfx">DocFx</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
