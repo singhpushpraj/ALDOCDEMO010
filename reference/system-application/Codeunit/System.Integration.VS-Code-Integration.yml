@@ -1,0 +1,28 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."VS Code Integration"
+alId: ID 8334
+namespace: System.Integration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Codeunit::System#Integration#VS Code Integration
+summary: >-
+  Provides functionality to embed hyperlinks that send requests to VS Code to navigate to an object's definition in source code
+
+  and to open the source code of an extension from Git.
+name: '"VS Code Integration"'
+uid: O:Codeunit::System#Integration#VS_Code_Integration

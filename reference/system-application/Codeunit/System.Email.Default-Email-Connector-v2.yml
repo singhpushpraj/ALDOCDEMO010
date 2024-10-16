@@ -1,0 +1,134 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Default Email Connector v2"
+alId: ID 8998
+namespace: System.Email
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure Send(EmailMessage: Codeunit "Email Message", AccountId: Guid)'
+    parameters:
+    - id: EmailMessage
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: AccountId
+      parameterType:
+        name: Guid
+        isExternal: true
+  name: Send
+  uid: M:Codeunit::System#Email#Default_Email_Connector_v2.Send(Codeunit::System#Email#Email_Message,Guid)
+- syntax:
+    content: 'procedure GetAccounts(var Accounts: Record "Email Account" temporary)'
+    parameters:
+    - id: Accounts
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+  name: GetAccounts
+  uid: M:Codeunit::System#Email#Default_Email_Connector_v2.GetAccounts(Email_Account@)
+- syntax:
+    content: 'procedure ShowAccountInformation(AccountId: Guid)'
+    parameters:
+    - id: AccountId
+      parameterType:
+        name: Guid
+        isExternal: true
+  name: ShowAccountInformation
+  uid: M:Codeunit::System#Email#Default_Email_Connector_v2.ShowAccountInformation(Guid)
+- syntax:
+    content: 'procedure RegisterAccount(var EmailAccount: Record "Email Account" temporary): Boolean'
+    parameters:
+    - id: EmailAccount
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: RegisterAccount
+  uid: M:Codeunit::System#Email#Default_Email_Connector_v2.RegisterAccount(Email_Account@):Boolean
+- syntax:
+    content: 'procedure DeleteAccount(AccountId: Guid): Boolean'
+    parameters:
+    - id: AccountId
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: DeleteAccount
+  uid: M:Codeunit::System#Email#Default_Email_Connector_v2.DeleteAccount(Guid):Boolean
+- syntax:
+    content: 'procedure GetLogoAsBase64(): Text'
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: GetLogoAsBase64
+  uid: M:Codeunit::System#Email#Default_Email_Connector_v2.GetLogoAsBase64:Text
+- syntax:
+    content: 'procedure GetDescription(): Text[250]'
+    return:
+      returnType:
+        name: Text[250]
+        isExternal: true
+  name: GetDescription
+  uid: M:Codeunit::System#Email#Default_Email_Connector_v2.GetDescription:Text[250]
+- syntax:
+    content: 'procedure Reply(var EmailMessage: Codeunit "Email Message", AccountId: Guid)'
+    parameters:
+    - id: EmailMessage
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: AccountId
+      parameterType:
+        name: Guid
+        isExternal: true
+  name: Reply
+  uid: M:Codeunit::System#Email#Default_Email_Connector_v2.Reply(Codeunit::System#Email#Email_Message@,Guid)
+- syntax:
+    content: 'procedure RetrieveEmails(AccountId: Guid, var EmailInbox: Record "Email Inbox")'
+    parameters:
+    - id: AccountId
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: EmailInbox
+      parameterType:
+        name: Record "Email Inbox"
+        isExternal: true
+  name: RetrieveEmails
+  uid: M:Codeunit::System#Email#Default_Email_Connector_v2.RetrieveEmails(Guid,Email_Inbox@)
+- syntax:
+    content: 'procedure MarkAsRead(AccountId: Guid, ExternalId: Text)'
+    parameters:
+    - id: AccountId
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ExternalId
+      parameterType:
+        name: Text
+        isExternal: true
+  name: MarkAsRead
+  uid: M:Codeunit::System#Email#Default_Email_Connector_v2.MarkAsRead(Guid,Text)
+implements:
+- internalReference: O:Interface::System#Email#Email_Connector_v2
+  name: System.Email."Email Connector v2"
+  isExternal: false
+commentId: O:Codeunit::System#Email#Default Email Connector v2
+summary: This is the default implementation of the Email Connector v2 interface which adds the reply, retrievial of emails and marking them as read functionalities.
+name: '"Default Email Connector v2"'
+uid: O:Codeunit::System#Email#Default_Email_Connector_v2

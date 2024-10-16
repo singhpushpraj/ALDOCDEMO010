@@ -1,0 +1,18 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps.AppSource.AppSourceExtensionManagement
+alId: ID 2515
+namespace: System.Apps.AppSource
+baseKind: Page
+kind: PageExtension
+parent: N:Module::System_Application::Namespace::System.Apps.AppSource
+langs:
+- al
+extends:
+  internalReference: O:Page::System#Apps#Extension_Management
+  name: System.Apps."Extension Management"
+  isExternal: false
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::System#Apps#AppSource#AppSourceExtensionManagement
+name: AppSourceExtensionManagement
+uid: O:PageExtension::System#Apps#AppSource#AppSourceExtensionManagement

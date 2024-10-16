@@ -1,0 +1,65 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Navigation Bar Subscribers"
+alId: ID 154
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+events:
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnBeforeDefaultOpenCompanySettings(var Handled: Boolean)'
+    parameters:
+    - id: Handled
+      description: The flag which if set, would stop executing the event.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Notifies that the Default Open Company Settings has been invoked.
+  name: OnBeforeDefaultOpenCompanySettings
+  uid: M:Codeunit::System#Environment#Configuration#Navigation_Bar_Subscribers.OnBeforeDefaultOpenCompanySettings(Boolean@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnBeforeDefaultOpenRoleBasedSetupExperience(var Handled: Boolean)'
+    parameters:
+    - id: Handled
+      description: The flag which if set, would stop executing the event.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Notifies that the Default Open Role Based Setup Experience has been invoked.
+  name: OnBeforeDefaultOpenRoleBasedSetupExperience
+  uid: M:Codeunit::System#Environment#Configuration#Navigation_Bar_Subscribers.OnBeforeDefaultOpenRoleBasedSetupExperience(Boolean@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnBeforeDefaultOpenGeneralSetupExperience(var Handled: Boolean)'
+    parameters:
+    - id: Handled
+      description: The flag which if set, would stop executing the event.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Notifies that the Default Open General Setup Experience has been invoked.
+  name: OnBeforeDefaultOpenGeneralSetupExperience
+  uid: M:Codeunit::System#Environment#Configuration#Navigation_Bar_Subscribers.OnBeforeDefaultOpenGeneralSetupExperience(Boolean@)
+commentId: O:Codeunit::System#Environment#Configuration#Navigation Bar Subscribers
+summary: Collection of the default subscribers to system events and corresponding overridable integration events.
+name: '"Navigation Bar Subscribers"'
+uid: O:Codeunit::System#Environment#Configuration#Navigation_Bar_Subscribers

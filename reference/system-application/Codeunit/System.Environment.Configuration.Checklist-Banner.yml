@@ -1,0 +1,100 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Checklist Banner"
+alId: ID 3728
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Description
+  value: Public events for the Checklist Banner
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+events:
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnBeforeUpdateBannerLabels(var IsHandled: Boolean, IsEvaluationCompany: Boolean, var TitleTxt: Text, var TitleCollapsedTxt: Text, var HeaderTxt: Text, var HeaderCollapsedTxt: Text, var DescriptionTxt: Text, IsSetupStarted: Boolean, AreAllItemsSkippedOrCompleted: Boolean)'
+    parameters:
+    - id: IsHandled
+      description: Whether the labels are handled by the subscriber, set it to false if you want them to be handled by first-party logic
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: IsEvaluationCompany
+      description: If the company has type Evaluation
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: TitleTxt
+      description: The title text for the checklist banner
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TitleCollapsedTxt
+      description: The title collapse text for the checklist banner
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HeaderTxt
+      description: The header text for the checklist banner
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HeaderCollapsedTxt
+      description: The header collapse text for the checklist banner
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DescriptionTxt
+      description: The description text for the checklist banner
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IsSetupStarted
+      description: If setup has started for the checklist banner
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: AreAllItemsSkippedOrCompleted
+      description: If all the checklist items are skipped or completed
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Integration Event to provide the ability to customize Labels on the Checklist Banner
+  name: OnBeforeUpdateBannerLabels
+  uid: M:Codeunit::System#Environment#Configuration#Checklist_Banner.OnBeforeUpdateBannerLabels(Boolean@,Boolean,Text@,Text@,Text@,Text@,Text@,Boolean,Boolean)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnOpenChecklistBannerPage(var SkipWelcomeState: Boolean, IsEvaluationCompany: Boolean)'
+    parameters:
+    - id: SkipWelcomeState
+      description: Whether to skip the welcome state or not
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: IsEvaluationCompany
+      description: If the company has type Evaluation
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Integration Event to provide the ability to skip the welcome state of the checklist banner.
+  name: OnOpenChecklistBannerPage
+  uid: M:Codeunit::System#Environment#Configuration#Checklist_Banner.OnOpenChecklistBannerPage(Boolean@,Boolean)
+commentId: O:Codeunit::System#Environment#Configuration#Checklist Banner
+summary: Provides functionality to customize the Checklist Banner
+name: '"Checklist Banner"'
+uid: O:Codeunit::System#Environment#Configuration#Checklist_Banner

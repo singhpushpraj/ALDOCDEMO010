@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."VSC Intgr. - Admin"
+alId: ID 8335
+namespace: System.Integration
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: Caption
+  value: VS Code Integration - Admin
+  promoted: false
+commentId: O:PermissionSet::System#Integration#VSC Intgr# - Admin
+name: '"VSC Intgr. - Admin"'
+uid: O:PermissionSet::System#Integration#VSC_Intgr#_-_Admin

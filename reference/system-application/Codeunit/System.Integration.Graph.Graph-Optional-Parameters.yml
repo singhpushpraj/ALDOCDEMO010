@@ -1,0 +1,119 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Graph."Graph Optional Parameters"
+alId: ID 9353
+namespace: System.Integration.Graph
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration.Graph
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetIfMatch(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'IF-Match' HttpHeader for a request.
+  name: SetIfMatch
+  uid: M:Codeunit::System#Integration#Graph#Graph_Optional_Parameters.SetIfMatch(Text)
+- syntax:
+    content: 'procedure SetIfNoneMatchRequestHeader(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'If-None-Match' HttpHeader for a request.
+  name: SetIfNoneMatchRequestHeader
+  uid: M:Codeunit::System#Integration#Graph#Graph_Optional_Parameters.SetIfNoneMatchRequestHeader(Text)
+- syntax:
+    content: 'procedure SetPreferRequestHeader(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'Prefer' HttpHeader for a request.
+  name: SetPreferRequestHeader
+  uid: M:Codeunit::System#Integration#Graph#Graph_Optional_Parameters.SetPreferRequestHeader(Text)
+- syntax:
+    content: 'procedure SetConsistencyLevelRequestHeader(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'ConsistencyLevel' HttpHeader for a request.
+  name: SetConsistencyLevelRequestHeader
+  uid: M:Codeunit::System#Integration#Graph#Graph_Optional_Parameters.SetConsistencyLevelRequestHeader(Text)
+- syntax:
+    content: 'procedure SetRequestHeader(GraphRequestHeader: Enum "Graph Request Header", HeaderValue: Text)'
+    parameters:
+    - id: GraphRequestHeader
+      description: The Request Header
+      parameterType:
+        internalReference: O:Enum::System#Integration#Graph#Graph_Request_Header
+        name: System.Integration.Graph."Graph Request Header"
+        isExternal: false
+    - id: HeaderValue
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for a HttpHeader for a request.
+  name: SetRequestHeader
+  uid: M:Codeunit::System#Integration#Graph#Graph_Optional_Parameters.SetRequestHeader(Enum::System#Integration#Graph#Graph_Request_Header,Text)
+- syntax:
+    content: 'procedure SetMicrosftGraphConflictBehavior(GraphConflictBehavior: Enum "Graph ConflictBehavior")'
+    parameters:
+    - id: GraphConflictBehavior
+      description: Enum "Graph ConflictBehavior" value specifying the HttpHeader value
+      parameterType:
+        internalReference: O:Enum::System#Integration#Graph#Graph_ConflictBehavior
+        name: System.Integration.Graph."Graph ConflictBehavior"
+        isExternal: false
+  summary: Sets the value for '@microsoft.graph.conflictBehavior' HttpHeader for a request.
+  name: SetMicrosftGraphConflictBehavior
+  uid: M:Codeunit::System#Integration#Graph#Graph_Optional_Parameters.SetMicrosftGraphConflictBehavior(Enum::System#Integration#Graph#Graph_ConflictBehavior)
+- syntax:
+    content: 'procedure SetODataQueryParameter(GraphODataQueryParameter: Enum "Graph OData Query Parameter", ODataQueryParameterValue: Text)'
+    parameters:
+    - id: GraphODataQueryParameter
+      description: The OData query parameter
+      parameterType:
+        internalReference: O:Enum::System#Integration#Graph#Graph_OData_Query_Parameter
+        name: System.Integration.Graph."Graph OData Query Parameter"
+        isExternal: false
+    - id: ODataQueryParameterValue
+      description: Text value specifying the query parameter
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Sets the value for an OData Query Parameter
+
+    see: https://learn.microsoft.com/en-us/graph/query-parameters?tabs=http#odata-system-query-options
+  name: SetODataQueryParameter
+  uid: M:Codeunit::System#Integration#Graph#Graph_Optional_Parameters.SetODataQueryParameter(Enum::System#Integration#Graph#Graph_OData_Query_Parameter,Text)
+commentId: O:Codeunit::System#Integration#Graph#Graph Optional Parameters
+summary: Holder for the optional Microsoft Graph HTTP headers and URL parameters.
+name: '"Graph Optional Parameters"'
+uid: O:Codeunit::System#Integration#Graph#Graph_Optional_Parameters

@@ -1,0 +1,79 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Address Lookup"
+alId: ID 8945
+namespace: System.Email
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure GetSelectedSuggestionsAsText(var EmailAddressLookup: Record "Email Address Lookup" temporary): Text'
+    parameters:
+    - id: EmailAddressLookup
+      parameterType:
+        name: Record "Email Address Lookup" temporary
+        isExternal: true
+    return:
+      description: A concatenated string of the email addresses.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Produces a string of email addresses from an Email Address record.
+  name: GetSelectedSuggestionsAsText
+  uid: M:Codeunit::System#Email#Email_Address_Lookup.GetSelectedSuggestionsAsText(Email_Address_Lookup@):Text
+events:
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnGetSuggestedAddresses(TableId: Integer, SystemId: Guid, var Address: Record "Email Address Lookup" temporary)'
+    parameters:
+    - id: TableId
+      description: Table id of a related record.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemId
+      description: System id of a related record.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: Address
+      description: Email Address record used to return suggested addresses.
+      parameterType:
+        name: Record "Email Address Lookup" temporary
+        isExternal: true
+  summary: Event that allows subscribers to populate the list of "Suggested Email Addresses" in the Email Address Lookup.
+  name: OnGetSuggestedAddresses
+  uid: M:Codeunit::System#Email#Email_Address_Lookup.OnGetSuggestedAddresses(Integer,Guid,Email_Address_Lookup@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnLookupAddressFromEntity(Entity: Enum "Email Address Entity", var Address: Record "Email Address Lookup" temporary, var IsHandled: Boolean)'
+    parameters:
+    - id: Entity
+      description: Entity Type.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Address_Entity
+        name: System.Email."Email Address Entity"
+        isExternal: false
+    - id: Address
+      description: Email Address record used to return addresses.
+      parameterType:
+        name: Record "Email Address Lookup" temporary
+        isExternal: true
+    - id: IsHandled
+      description: Boolean indicating whether the event has been handled.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Event that retrieves email address information from a specified entity.
+  name: OnLookupAddressFromEntity
+  uid: M:Codeunit::System#Email#Email_Address_Lookup.OnLookupAddressFromEntity(Enum::System#Email#Email_Address_Entity,Email_Address_Lookup@,Boolean@)
+commentId: O:Codeunit::System#Email#Email Address Lookup
+summary: Provides functionality to run an email address lookup.
+name: '"Email Address Lookup"'
+uid: O:Codeunit::System#Email#Email_Address_Lookup

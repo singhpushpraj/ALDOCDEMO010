@@ -1,0 +1,151 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."AOAI Operation Response"
+alId: ID 7770
+namespace: System.AI
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsSuccess(): Boolean'
+    return:
+      description: True if the operation was successful.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Check whether the operation was successful.
+  name: IsSuccess
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.IsSuccess:Boolean
+- syntax:
+    content: 'procedure GetStatusCode(): Integer'
+    return:
+      description: The status code of the operation.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Get the status code of the operation.
+  name: GetStatusCode
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.GetStatusCode:Integer
+- syntax:
+    content: 'procedure GetResult(): Text'
+    return:
+      description: The result of the operation.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Get the result of the operation.
+  name: GetResult
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.GetResult:Text
+- syntax:
+    content: 'procedure GetError(): Text'
+    return:
+      description: The error text of the operation.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Get the error text of the operation.
+  name: GetError
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.GetError:Text
+- syntax:
+    content: 'procedure IsFunctionCall(): Boolean'
+    return:
+      description: True if it was a function call, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Get whether the operation was a function call.
+  name: IsFunctionCall
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.IsFunctionCall:Boolean
+- syntax:
+    content: 'procedure HasFunctionResponsesByName(FunctionName: Text): Boolean'
+    parameters:
+    - id: FunctionName
+      description: The case sensitive function name to search for.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if any function responses were found
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Get whether there are any function responses for a given function name.
+  name: HasFunctionResponsesByName
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.HasFunctionResponsesByName(Text):Boolean
+- syntax:
+    content: 'procedure TryGetFunctionReponsesByName(FunctionName: Text, var MatchedAOAIFunctionResponses: List of [Codeunit "AOAI Function Response"]): Boolean'
+    parameters:
+    - id: FunctionName
+      description: The case sensitive function name to search for.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: MatchedAOAIFunctionResponses
+      description: The function responses that match the given function name
+      parameterType:
+        name: List of [Codeunit System.AI."AOAI Function Response"]
+        isExternal: true
+    return:
+      description: True if any function responses were found
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Get all the function responses for a specified function name.
+  name: TryGetFunctionReponsesByName
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.TryGetFunctionReponsesByName(Text,List_of_[AOAI_Function_Response]@):Boolean
+- syntax:
+    signatures:
+    - '[Obsolete(There could be multiple function responses, use GetFunctionResponses to iterate through them all. For compatibility, GetFunctionResponse will return the last function returned by the model,25.0)]'
+    content: 'procedure GetFunctionResponse(): Codeunit "AOAI Function Response"'
+    return:
+      description: The codeunit which contains response details for the function call.
+      returnType:
+        internalReference: O:Codeunit::System#AI#AOAI_Function_Response
+        name: System.AI."AOAI Function Response"
+        isExternal: false
+  summary: Get the function response codeunit which contains the response details.
+  name: GetFunctionResponse
+  obsoletion:
+    state: pending
+    reason: There could be multiple function responses, use GetFunctionResponses to iterate through them all. For compatibility, GetFunctionResponse will return the last function returned by the model
+    version: "25.0"
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.GetFunctionResponse:Codeunit::System#AI#AOAI_Function_Response
+- syntax:
+    content: 'procedure GetFunctionResponses(): List of [Codeunit "AOAI Function Response"]'
+    return:
+      returnType:
+        name: List of [Codeunit System.AI."AOAI Function Response"]
+        isExternal: true
+  name: GetFunctionResponses
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.GetFunctionResponses:List_of_[AOAI_Function_Response]
+- syntax:
+    content: 'procedure AppendFunctionResponsesToChatMessages(var AOAIChatMessages: Codeunit "AOAI Chat Messages")'
+    parameters:
+    - id: AOAIChatMessages
+      description: The chat messages instance to append the result to.
+      parameterType:
+        internalReference: O:Codeunit::System#AI#AOAI_Chat_Messages
+        name: System.AI."AOAI Chat Messages"
+        isExternal: false
+  summary: Appends all of the successful function results to the provided AOAIChatMessages instance.
+  remarks: The last chat message in the history must contain the tool calls from this operation.
+  name: AppendFunctionResponsesToChatMessages
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.AppendFunctionResponsesToChatMessages(Codeunit::System#AI#AOAI_Chat_Messages@)
+commentId: O:Codeunit::System#AI#AOAI Operation Response
+summary: The status and result of an operation.
+name: '"AOAI Operation Response"'
+uid: O:Codeunit::System#AI#AOAI_Operation_Response

@@ -1,0 +1,90 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Page Summary Parameters"
+alId: ID 2719
+namespace: System.Integration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: Caption
+  value: Page Summary Settings
+  promoted: false
+- name: ReplicateData
+  value: "False"
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure FromJson(PageSummaryParameterJson: Text)'
+    parameters:
+    - id: PageSummaryParameterJson
+      description: Page summary parameters in JSON format
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes the page summary parameters record from JSON.
+  name: FromJson
+  uid: M:Table::System#Integration#Page_Summary_Parameters.FromJson(Text)
+fields:
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Page ID"'
+  uid: F:Table::System#Integration#Page_Summary_Parameters.Page_ID
+- type:
+    name: Guid
+    isExternal: true
+  name: '"Record SystemID"'
+  uid: F:Table::System#Integration#Page_Summary_Parameters.Record_SystemID
+- type:
+    name: Text[2024]
+    isExternal: true
+  name: Bookmark
+  uid: F:Table::System#Integration#Page_Summary_Parameters.Bookmark[2024]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Include Binary Data"'
+  uid: F:Table::System#Integration#Page_Summary_Parameters.Include_Binary_Data
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Integration#Page_Summary_Parameters.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Integration#Page_Summary_Parameters.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Integration#Page_Summary_Parameters.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Integration#Page_Summary_Parameters.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Integration#Page_Summary_Parameters.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Integration#Page_Summary_Parameters.SystemRowVersion
+commentId: O:Table::System#Integration#Page Summary Parameters
+name: '"Page Summary Parameters"'
+uid: O:Table::System#Integration#Page_Summary_Parameters

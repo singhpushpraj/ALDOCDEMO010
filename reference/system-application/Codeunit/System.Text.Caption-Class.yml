@@ -1,0 +1,90 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Caption Class"
+alId: ID 42
+namespace: System.Text
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+events:
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnResolveCaptionClass(CaptionArea: Text, CaptionExpr: Text, Language: Integer, var Caption: Text, var Resolved: Boolean)'
+    parameters:
+    - id: CaptionArea
+      description: The caption area used in the CaptionClass expression. Should be unique for every subscriber.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CaptionExpr
+      description: The caption expression used for resolving the CaptionClass expression.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Language
+      description: The current language ID that can be used for resolving the CaptionClass expression.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Caption
+      description: Exit parameter - the resolved caption
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Resolved
+      description: Boolean for marking whether the CaptionClass expression was resolved.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Integration event for resolving CaptionClass expression, split into CaptionArea and CaptionExpr.
+
+    Note there should be a single subscriber per caption area.
+
+    The event implements the "resolved" pattern - if a subscriber resolves the caption, it should set Resolved to TRUE.
+  name: OnResolveCaptionClass
+  uid: M:Codeunit::System#Text#Caption_Class.OnResolveCaptionClass(Text,Text,Integer,Text@,Boolean@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnAfterCaptionClassResolve(Language: Integer, CaptionExpression: Text, var Caption: Text[1024])'
+    parameters:
+    - id: Language
+      description: The current language ID.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: CaptionExpression
+      description: The original CaptionClass expression.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Caption
+      description: The resolved caption expression.
+      parameterType:
+        name: Text[1024]
+        isExternal: true
+  summary: Integration event for after resolving CaptionClass expression.
+  name: OnAfterCaptionClassResolve
+  uid: M:Codeunit::System#Text#Caption_Class.OnAfterCaptionClassResolve(Integer,Text,Text[1024]@)
+commentId: O:Codeunit::System#Text#Caption Class
+summary: Exposes events that can be used to resolve custom CaptionClass properties.
+name: '"Caption Class"'
+uid: O:Codeunit::System#Text#Caption_Class

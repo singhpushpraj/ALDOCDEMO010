@@ -1,0 +1,64 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Connector v2"
+namespace: System.Email
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure Reply(var EmailMessage: Codeunit "Email Message", AccountId: Guid)'
+    parameters:
+    - id: EmailMessage
+      description: The email message that is to be sent out.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: AccountId
+      description: The email account ID which is used to send out the email.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Reply to an e-mail using the provided account.
+  name: Reply
+  uid: M:Interface::System#Email#Email_Connector_v2.Reply(Codeunit::System#Email#Email_Message@,Guid)
+- syntax:
+    content: 'procedure RetrieveEmails(AccountId: Guid, var EmailInbox: Record "Email Inbox")'
+    parameters:
+    - id: AccountId
+      description: The email account ID which is used to send out the email.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: EmailInbox
+      description: The email inbox record that will store the emails.
+      parameterType:
+        name: Record "Email Inbox"
+        isExternal: true
+  summary: Read e-mails from the provided account.
+  name: RetrieveEmails
+  uid: M:Interface::System#Email#Email_Connector_v2.RetrieveEmails(Guid,Email_Inbox@)
+- syntax:
+    content: 'procedure MarkAsRead(AccountId: Guid, ExternalId: Text)'
+    parameters:
+    - id: AccountId
+      description: The email account ID.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ExternalId
+      description: The external ID of the email.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Mark an e-mail as read in the provided account.
+  name: MarkAsRead
+  uid: M:Interface::System#Email#Email_Connector_v2.MarkAsRead(Guid,Text)
+commentId: O:Interface::System#Email#Email Connector v2
+summary: An e-mail connector interface enhances the "Email Connector" with reading, replying to e-mails and marking emails as read.
+name: '"Email Connector v2"'
+uid: O:Interface::System#Email#Email_Connector_v2

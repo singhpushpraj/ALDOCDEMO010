@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps.AppSource.AppSourceMarketPlaceExtension
+alId: ID 2516
+namespace: System.Apps.AppSource
+baseKind: Page
+kind: PageExtension
+parent: N:Module::System_Application::Namespace::System.Apps.AppSource
+langs:
+- al
+extends:
+  internalReference: O:Page::System#Apps#Extension_Marketplace
+  name: System.Apps."Extension Marketplace"
+  isExternal: false
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+objectProperties:
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteReason
+  value: This page will be obsoleted. Microsoft AppSource apps feature will replace the Extension Marketplace.
+  promoted: false
+- name: ObsoleteTag
+  value: "25.0"
+  promoted: false
+commentId: O:PageExtension::System#Apps#AppSource#AppSourceMarketPlaceExtension
+name: AppSourceMarketPlaceExtension
+obsoletion:
+  state: pending
+  reason: This page will be obsoleted. Microsoft AppSource apps feature will replace the Extension Marketplace.
+  version: "25.0"
+uid: O:PageExtension::System#Apps#AppSource#AppSourceMarketPlaceExtension

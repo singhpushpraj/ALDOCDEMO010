@@ -1,0 +1,203 @@
+﻿### YamlMime:BusinessCentralObsoletionList
+tag: "25.0"
+groups:
+- groupName: "25.0"
+  symbols:
+  - kind: Method
+    internalReference: M:Codeunit::System#Azure#Storage#Storage_Service_Authorization.CreateAccountSAS(Text,Enum::System#Azure#Storage#Storage_Service_API_Version,List_of_[SAS_Service_Type],List_of_[SAS_Resource_Type],List_of_[SAS_Permission],DateTime):Interface::System#Azure#Storage#Storage_Service_Authorization
+    name: 'CreateAccountSAS(SigningKey: Text, SignedVersion: Enum 9060 "Storage Service API Version", SignedServices: List of [Enum 9062 "SAS Service Type"], SignedResources: List of [Enum 9063 "SAS Resource Type"], SignedPermissions: List of [Enum 9064 "SAS Permission"], SignedExpiry: DateTime): Interface "Storage Service Authorization"'
+    reason: Use CreateAccountSAS with SecretText data type for SigningKey.
+  - kind: Method
+    internalReference: M:Codeunit::System#Azure#Storage#Storage_Service_Authorization.CreateAccountSAS(Text,Enum::System#Azure#Storage#Storage_Service_API_Version,List_of_[SAS_Service_Type],List_of_[SAS_Resource_Type],List_of_[SAS_Permission],DateTime,SAS_Parameters):Interface::System#Azure#Storage#Storage_Service_Authorization
+    name: 'CreateAccountSAS(SigningKey: Text, SignedVersion: Enum 9060 "Storage Service API Version", SignedServices: List of [Enum 9062 "SAS Service Type"], SignedResources: List of [Enum 9063 "SAS Resource Type"], SignedPermissions: List of [Enum 9064 "SAS Permission"], SignedExpiry: DateTime, OptionalSASParameters: Record 9064 "SAS Parameters" temporary): Interface "Storage Service Authorization"'
+    reason: Use CreateAccountSAS with SecretText data type for SigningKey.
+  - kind: Method
+    internalReference: M:Codeunit::System#Azure#Storage#Storage_Service_Authorization.UseReadySAS(Text):Interface::System#Azure#Storage#Storage_Service_Authorization
+    name: 'UseReadySAS(SASToken: Text): Interface "Storage Service Authorization"'
+    reason: Use UseReadySAS with SecretText data type for SASToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#AccessControl#Password_Dialog_Management.OpenChangePasswordDialog(SecretText@,SecretText@)
+    name: 'OpenChangePasswordDialog(var OldPassword: SecretText, var Password: SecretText)'
+    reason: Replaced by OpenPasswordChangeDialog without out OldPassword param
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCodeWithCertificate(Text,Text,Text,Text,Text,Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@):Boolean
+    name: 'AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: SecretText, var AuthCodeErr: Text): Boolean'
+    reason: Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken and Certificate.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCodeWithCertificate(Text,Text,SecretText,Text,Text,Text,Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@):Boolean
+    name: 'AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: SecretText, var AuthCodeErr: Text): Boolean'
+    reason: Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken, Certificate and CertificatePassword.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@):Boolean
+    name: 'AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: SecretText, var AuthCodeErr: Text): Boolean'
+    reason: Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken and Certificate.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCodeWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@):Boolean
+    name: 'AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: SecretText, var AuthCodeErr: Text): Boolean'
+    reason: Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken, Certificate and CertificatePassword.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@):Boolean
+    name: 'AcquireTokensByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: SecretText, var IdToken: Text, var AuthCodeErr: Text): Boolean'
+    reason: Use AcquireTokensByAuthorizationCodeWithCertificate with SecretText data type for AccessToken and Certificate.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensByAuthorizationCodeWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@):Boolean
+    name: 'AcquireTokensByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: SecretText, var IdToken: Text, var AuthCodeErr: Text): Boolean'
+    reason: Use AcquireTokensByAuthorizationCodeWithCertificate with SecretText data type for AccessToken, Certificate and CertificatePassword.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@):Boolean
+    name: 'AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: SecretText, var TokenCache: Text, var Error: Text): Boolean'
+    reason: Use AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken and Certificate.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@):Boolean
+    name: 'AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: SecretText, var TokenCache: Text, var Error: Text): Boolean'
+    reason: Use AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken, Certificate and CertificatePassword.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@,Text@):Boolean
+    name: 'AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: SecretText, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean'
+    reason: Use AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken and Certificate.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@,Text@):Boolean
+    name: 'AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: SecretText, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean'
+    reason: Use AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken, Certificate and CertificatePassword.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCacheWithCertificate(Text,Text,Text,Text,Text,SecretText@):Boolean
+    name: 'AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, ResourceURL: Text, var AccessToken: SecretText): Boolean'
+    reason: Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken and Certificate.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCacheWithCertificate(Text,Text,SecretText,Text,Text,Text,SecretText@):Boolean
+    name: 'AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, ResourceURL: Text, var AccessToken: SecretText): Boolean'
+    reason: Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken, Certificate and CertificatePassword.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCacheWithCertificate(Text,Text,Text,Text,List_of_[Text],SecretText@):Boolean
+    name: 'AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText): Boolean'
+    reason: Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken and Certificate.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCacheWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],SecretText@):Boolean
+    name: 'AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText): Boolean'
+    reason: Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken, Certificate and CertificatePassword.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensFromCacheWithCertificate(Text,Text,Text,Text,List_of_[Text],SecretText@,Text@):Boolean
+    name: 'AcquireTokensFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean'
+    reason: Use AcquireTokensFromCacheWithCertificate with SecretText data type for AccessToken and Certificate.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensFromCacheWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],SecretText@,Text@):Boolean
+    name: 'AcquireTokensFromCacheWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean'
+    reason: Use AcquireTokensWithCertificate with SecretText data type for AccessToken, Certificate and CertificatePassword.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensWithCertificate(Text,Text,Text,Text,List_of_[Text],SecretText@,Text@):Boolean
+    name: 'AcquireTokensWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean'
+    reason: Use AcquireTokensWithCertificate with SecretText data type for AccessToken and Certificate.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],SecretText@,Text@):Boolean
+    name: 'AcquireTokensWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean'
+    reason: Use AcquireTokensWithCertificate with SecretText data type for AccessToken, Certificate and CertificatePassword.
+  - kind: PageExtension
+    internalReference: O:PageExtension::System#Apps#AppSource#AppSourceMarketPlaceExtension
+    name: PageExtension 2516 AppSourceMarketPlaceExtension
+    reason: This page will be obsoleted. Microsoft AppSource apps feature will replace the Extension Marketplace.
+  - kind: Method
+    internalReference: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.InitializeFrame(Boolean,Text)
+    name: 'InitializeFrame(FullPage: Boolean, Ratio: Text)'
+    reason: Use SetSettings, SetToken and then EmbedReport instead.
+  - kind: Method
+    internalReference: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedReportWithOptions(Text,Text,Text,Text,Boolean)
+    name: 'EmbedReportWithOptions(ReportLink: Text, ReportId: Text, AuthToken: Text, PageName: Text, ShowPanes: Boolean)'
+    reason: Use SetSettings, SetToken and then EmbedReport instead.
+  - kind: Method
+    internalReference: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.ViewMode
+    name: ViewMode()
+    reason: Switching between edit more and view mode is no longer supported. Only view mode will be supported going forward.
+  - kind: Method
+    internalReference: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EditMode
+    name: EditMode()
+    reason: Switching between edit more and view mode is no longer supported. Only view mode will be supported going forward.
+  - kind: Method
+    internalReference: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedReport(Text,Text,Text,Text)
+    name: 'EmbedReport(ReportLink: Text, ReportId: Text, AuthToken: Text, PageName: Text)'
+    reason: Call the procedure SetToken, and then use EmbedPowerBIReport instead.
+  - kind: Method
+    internalReference: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedDashboard(Text,Text,Text)
+    name: 'EmbedDashboard(DashboardLink: Text, DashboardId: Text, AuthToken: Text)'
+    reason: Call the procedure SetToken, and then use EmbedPowerBIDashboard instead.
+  - kind: Method
+    internalReference: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedDashboardTile(Text,Text,Text,Text)
+    name: 'EmbedDashboardTile(DashboardTileLink: Text, DashboardId: Text, TileId: Text, AuthToken: Text)'
+    reason: Call the procedure SetToken, and then use the EmbedPowerBIDashboardTile instead.
+  - kind: Method
+    internalReference: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedReportVisual(Text,Text,Text,Text,Text)
+    name: 'EmbedReportVisual(ReportVisualLink: Text, ReportId: Text, PageName: Text, VisualName: Text, AuthToken: Text)'
+    reason: Call the procedure SetToken, and then use EmbedPowerBIReportVisual instead.
+  - kind: Method
+    internalReference: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters.AddField(Text,Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type):Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter
+    name: 'AddField(ODataFieldName: Text, EditInExcelEdmType: Enum 1490 "Edit in Excel Edm Type"): Interface "Edit in Excel Field Filter"'
+    reason: Use AddFieldV2 instead.
+  - kind: Method
+    internalReference: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters.AddField(Text,Enum::System#Integration#Excel#Edit_in_Excel_Filter_Collection_Type,Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type):Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter
+    name: 'AddField(ODataFieldName: Text, EditInExcelFilterOperatorType: Enum 1491 "Edit in Excel Filter Collection Type", EditInExcelEdmType: Enum 1490 "Edit in Excel Edm Type"): Interface "Edit in Excel Field Filter"'
+    reason: Use AddFieldV2 instead.
+  - kind: Method
+    internalReference: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters.AddField(Text,Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type,Text,Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type)
+    name: 'AddField(ODataFieldName: Text, EditInExcelFilterType: Enum 1481 "Edit in Excel Filter Type", FilterValue: Text, EditInExcelEdmType: Enum 1490 "Edit in Excel Edm Type")'
+    reason: Use AddFieldV2 instead.
+  - kind: Method
+    internalReference: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters.Get(Text):Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter
+    name: 'Get(ODataFieldName: Text): Interface "Edit in Excel Field Filter"'
+    reason: Use GetV2 instead.
+  - kind: Interface
+    internalReference: O:Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter
+    name: Interface "Edit in Excel Field Filter"
+    reason: Replaced by "Edit in Excel Field Filter v2" with support for getting the collection type of the filter.
+  - kind: ControlAddIn
+    internalReference: O:ControlAddIn::System#Automation#FlowIntegration
+    name: ControlAddIn FlowIntegration
+    reason: This add-in is deprecated. There is no replacement. Power Automate is supported natively without add-ins.
+  - kind: Method
+    internalReference: M:Codeunit::System#AI#AOAI_Deployments.GetTurbo0301:Text
+    name: 'GetTurbo0301(): Text'
+    reason: Specific deployment names are no longer supported. Use GetGPT35TurboLatest and GetGPT4Latest instead (or GetGPT35TurboPreview and GetGPT4Preview for testing upcoming versions).
+  - kind: Method
+    internalReference: M:Codeunit::System#AI#AOAI_Deployments.GetGPT40613:Text
+    name: 'GetGPT40613(): Text'
+    reason: Specific deployment names are no longer supported. Use GetGPT35TurboLatest and GetGPT4Latest instead (or GetGPT35TurboPreview and GetGPT4Preview for testing upcoming versions).
+  - kind: Method
+    internalReference: M:Codeunit::System#AI#AOAI_Deployments.GetTurbo0613:Text
+    name: 'GetTurbo0613(): Text'
+    reason: Specific deployment names are no longer supported. Use GetGPT35TurboLatest and GetGPT4Latest instead (or GetGPT35TurboPreview and GetGPT4Preview for testing upcoming versions).
+  - kind: Method
+    internalReference: M:Codeunit::System#AI#AOAI_Deployments.GetGPT35TurboLatest:Text
+    name: 'GetGPT35TurboLatest(): Text'
+    reason: GPT35 Turbo is no longer supported. Use GetGPT4oMiniLatest instead (or GetGPT4oMiniPreview for testing upcoming versions).
+  - kind: Method
+    internalReference: M:Codeunit::System#AI#AOAI_Deployments.GetGPT35TurboPreview:Text
+    name: 'GetGPT35TurboPreview(): Text'
+    reason: GPT35 Turbo is no longer supported. Use GetGPT4oMiniLatest instead (or GetGPT4oMiniPreview for testing upcoming versions).
+  - kind: Method
+    internalReference: M:Codeunit::System#AI#AOAI_Deployments.GetGPT4Latest:Text
+    name: 'GetGPT4Latest(): Text'
+    reason: Generic GPT4 deployment name is no longer supported. Use GetGPT4oLatest instead (or GetGPT4oPreview for testing upcoming versions).
+  - kind: Method
+    internalReference: M:Codeunit::System#AI#AOAI_Deployments.GetGPT4Preview:Text
+    name: 'GetGPT4Preview(): Text'
+    reason: Generic GPT4 deployment name is no longer supported. Use GetGPT4oLatest instead (or GetGPT4oPreview for testing upcoming versions).
+  - kind: Method
+    internalReference: M:Codeunit::System#AI#AOAI_Chat_Messages.AddTool(JsonObject)
+    name: 'AddTool(NewTool: JsonObject)'
+    reason: Use AddTool that takes in an AOAI Function interface.
+  - kind: Method
+    internalReference: M:Codeunit::System#AI#AOAI_Chat_Messages.ModifyTool(Integer,JsonObject)
+    name: 'ModifyTool(Id: Integer, NewTool: JsonObject)'
+    reason: Deprecated with no replacement. Use DeleteFunctionTool and AddTool.
+  - kind: Method
+    internalReference: M:Codeunit::System#AI#AOAI_Chat_Messages.DeleteTool(Integer)
+    name: 'DeleteTool(Id: Integer)'
+    reason: Use DeleteFunctionTool that takes in a function name instead.
+  - kind: Method
+    internalReference: M:Codeunit::System#AI#AOAI_Chat_Messages.GetTools:List_of_[JsonObject]
+    name: 'GetTools(): List of [JsonObject]'
+    reason: Use GetFunctionTool() that takes in a function name and returns the interface.
+  - kind: Method
+    internalReference: M:Codeunit::System#AI#AOAI_Operation_Response.GetFunctionResponse:Codeunit::System#AI#AOAI_Function_Response
+    name: 'GetFunctionResponse(): Codeunit 7758 "AOAI Function Response"'
+    reason: There could be multiple function responses, use GetFunctionResponses to iterate through them all. For compatibility, GetFunctionResponse will return the last function returned by the model
+  uid: N:Module::System_Application_obsolete_by_25.0#25.0
+uid: N:Module::System_Application_obsolete_by_25.0

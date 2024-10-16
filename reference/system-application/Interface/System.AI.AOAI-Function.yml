@@ -1,0 +1,63 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."AOAI Function"
+namespace: System.AI
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetPrompt(): JsonObject'
+    return:
+      returnType:
+        name: JsonObject
+        isExternal: true
+  summary: >-
+    Get the prompt for the Function. Function prompt object describes the Function and the should contain the following fields:
+        - Type: The name of the Function, currently only function type is supported. For functions following fields are allowed:
+        -- Name: The name of the Function. (Required)
+        -- Description: The description of the Function. (Optional)
+        -- Parameters: The parameters of the Function. (Required)
+    More details can be found here: https://go.microsoft.com/fwlink/?linkid=2254538
+  name: GetPrompt
+  uid: M:Interface::System#AI#AOAI_Function.GetPrompt:JsonObject
+- syntax:
+    content: 'procedure Execute(Arguments: JsonObject): Variant'
+    parameters:
+    - id: Arguments
+      parameterType:
+        name: JsonObject
+        isExternal: true
+    return:
+      returnType:
+        name: Variant
+        isExternal: true
+  summary: >-
+    This function is invoked as a response from Azure Open AI.
+     -Arguments: The expected parameters of the Function defined.
+    The function returns a variant, and it's up to the implementation to decide what to return.
+  name: Execute
+  uid: M:Interface::System#AI#AOAI_Function.Execute(JsonObject):Variant
+- syntax:
+    content: 'procedure GetName(): Text'
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Get the name of the function.
+  remarks: This needs to match the function name in GetPrompt.
+  name: GetName
+  uid: M:Interface::System#AI#AOAI_Function.GetName:Text
+commentId: O:Interface::System#AI#AOAI Function
+name: '"AOAI Function"'
+uid: O:Interface::System#AI#AOAI_Function

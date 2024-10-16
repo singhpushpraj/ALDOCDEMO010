@@ -1,0 +1,369 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text.Json.Json
+alId: ID 5460
+namespace: System.Text.Json
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Text.Json
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure InitializeCollection(JSONString: Text)'
+    parameters:
+    - id: JSONString
+      description: The Json string
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes the JSON array with the specified JSON string.
+  name: InitializeCollection
+  uid: M:Codeunit::System#Text#Json#Json.InitializeCollection(Text)
+- syntax:
+    content: 'procedure InitializeObject(JSONString: Text)'
+    parameters:
+    - id: JSONString
+      description: The Json string
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes the JSON object with the specified JSON string.
+  name: InitializeObject
+  uid: M:Codeunit::System#Text#Json#Json.InitializeObject(Text)
+- syntax:
+    content: 'procedure GetCollectionCount(): Integer'
+    return:
+      description: The number of elements in the JSON array
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Returns the number of elements in the JSON array.
+  name: GetCollectionCount
+  uid: M:Codeunit::System#Text#Json#Json.GetCollectionCount:Integer
+- syntax:
+    content: 'procedure GetCollectionAsText(): Text'
+    return:
+      description: The JSON array in text format
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the JSON array in text format.
+  name: GetCollectionAsText
+  uid: M:Codeunit::System#Text#Json#Json.GetCollectionAsText:Text
+- syntax:
+    content: 'procedure GetCollection(): JsonArray'
+    return:
+      description: The JSON array
+      returnType:
+        name: JsonArray
+        isExternal: true
+  summary: Returns the JSON array.
+  name: GetCollection
+  uid: M:Codeunit::System#Text#Json#Json.GetCollection:JsonArray
+- syntax:
+    content: 'procedure GetObjectAsText(): Text'
+    return:
+      description: The JSON object in text format
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the JSON object in text format.
+  name: GetObjectAsText
+  uid: M:Codeunit::System#Text#Json#Json.GetObjectAsText:Text
+- syntax:
+    content: 'procedure GetObject(): JsonObject'
+    return:
+      description: The JSON object
+      returnType:
+        name: JsonObject
+        isExternal: true
+  summary: Returns the JSON object.
+  name: GetObject
+  uid: M:Codeunit::System#Text#Json#Json.GetObject:JsonObject
+- syntax:
+    content: 'procedure GetObjectFromCollectionByIndex(Index: Integer, var JsonObjectTxt: Text): Boolean'
+    parameters:
+    - id: Index
+      description: The index of the JSON object
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: JsonObjectTxt
+      description: The JSON object in text format
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the JSON object is returned; otherwise, false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Returns the JSON object at the specified index in the JSON array.
+  name: GetObjectFromCollectionByIndex
+  uid: M:Codeunit::System#Text#Json#Json.GetObjectFromCollectionByIndex(Integer,Text@):Boolean
+- syntax:
+    content: 'procedure GetValueAndSetToRecFieldNo(RecordRef: RecordRef, PropertyPath: Text, FieldNo: Integer): Boolean'
+    parameters:
+    - id: RecordRef
+      description: The record reference
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: PropertyPath
+      description: The property path
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FieldNo
+      description: The field number
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the value is set to the record field; otherwise, false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the value at the specified property path in the JSON object and sets it to the specified record field.
+  remarks: >-
+    Next type of fields are supported: Integer, Decimal, Date, Boolean, GUID, Text, Code, Option, BLOB, RecordID
+
+    Text values are trimmed to the Max Length of the field.
+  name: GetValueAndSetToRecFieldNo
+  uid: M:Codeunit::System#Text#Json#Json.GetValueAndSetToRecFieldNo(RecordRef,Text,Integer):Boolean
+- syntax:
+    content: 'procedure GetPropertyValueByName(PropertyName: Text, var Value: Variant): Boolean'
+    parameters:
+    - id: PropertyName
+      description: The property name
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: The value
+      parameterType:
+        name: Variant
+        isExternal: true
+    return:
+      description: True if the value is returned; otherwise, false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the value at the specified property name in the JSON object.
+  name: GetPropertyValueByName
+  uid: M:Codeunit::System#Text#Json#Json.GetPropertyValueByName(Text,Variant@):Boolean
+- syntax:
+    content: 'procedure GetStringPropertyValueByName(PropertyName: Text, var Value: Text): Boolean'
+    parameters:
+    - id: PropertyName
+      description: The property name
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: The value
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the value is returned; otherwise, false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the text value at the specified property name in the JSON object.
+  name: GetStringPropertyValueByName
+  uid: M:Codeunit::System#Text#Json#Json.GetStringPropertyValueByName(Text,Text@):Boolean
+- syntax:
+    content: 'procedure GetEnumPropertyValueFromJObjectByName(PropertyName: Text, var Value: Option): Boolean'
+    parameters:
+    - id: PropertyName
+      description: The property name
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: The value
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: True if the value is returned; otherwise, false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the option value at the specified property name in the JSON object.
+  name: GetEnumPropertyValueFromJObjectByName
+  uid: M:Codeunit::System#Text#Json#Json.GetEnumPropertyValueFromJObjectByName(Text,Option@):Boolean
+- syntax:
+    content: 'procedure GetBoolPropertyValueFromJObjectByName(PropertyName: Text, var Value: Boolean): Boolean'
+    parameters:
+    - id: PropertyName
+      description: The property name
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: The value
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: True if the value is returned; otherwise, false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the boolean value at the specified property name in the JSON object.
+  name: GetBoolPropertyValueFromJObjectByName
+  uid: M:Codeunit::System#Text#Json#Json.GetBoolPropertyValueFromJObjectByName(Text,Boolean@):Boolean
+- syntax:
+    content: 'procedure GetDecimalPropertyValueFromJObjectByName(PropertyName: Text, var Value: Decimal): Boolean'
+    parameters:
+    - id: PropertyName
+      description: The property name
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: The value
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: True if the value is returned; otherwise, false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the decimal value at the specified property name in the JSON object.
+  name: GetDecimalPropertyValueFromJObjectByName
+  uid: M:Codeunit::System#Text#Json#Json.GetDecimalPropertyValueFromJObjectByName(Text,Decimal@):Boolean
+- syntax:
+    content: 'procedure GetIntegerPropertyValueFromJObjectByName(PropertyName: Text, var Value: Integer): Boolean'
+    parameters:
+    - id: PropertyName
+      description: The property name
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: The value
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the value is returned; otherwise, false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the integer value at the specified property name in the JSON object.
+  name: GetIntegerPropertyValueFromJObjectByName
+  uid: M:Codeunit::System#Text#Json#Json.GetIntegerPropertyValueFromJObjectByName(Text,Integer@):Boolean
+- syntax:
+    content: 'procedure GetGuidPropertyValueFromJObjectByName(PropertyName: Text, var Value: Guid): Boolean'
+    parameters:
+    - id: PropertyName
+      description: The property name
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: The value
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the value is returned; otherwise, false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the Guid value at the specified property name in the JSON object.
+  name: GetGuidPropertyValueFromJObjectByName
+  uid: M:Codeunit::System#Text#Json#Json.GetGuidPropertyValueFromJObjectByName(Text,Guid@):Boolean
+- syntax:
+    content: 'procedure ReplaceOrAddJPropertyInJObject(PropertyName: Text, Value: Variant): Boolean'
+    parameters:
+    - id: PropertyName
+      description: The property name
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: The value
+      parameterType:
+        name: Variant
+        isExternal: true
+    return:
+      description: True if the property is replaced or added; otherwise, false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Replace or add the specified property in the JSON object.
+  name: ReplaceOrAddJPropertyInJObject
+  uid: M:Codeunit::System#Text#Json#Json.ReplaceOrAddJPropertyInJObject(Text,Variant):Boolean
+- syntax:
+    content: 'procedure AddJObjectToCollection(Value: Text): Boolean'
+    parameters:
+    - id: Value
+      description: The JSON object in text format
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the JSON object is added; otherwise, false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Add the the JSON object to the JSON array.
+  name: AddJObjectToCollection
+  uid: M:Codeunit::System#Text#Json#Json.AddJObjectToCollection(Text):Boolean
+- syntax:
+    content: 'procedure RemoveJObjectFromCollection(Index: Integer): Boolean'
+    parameters:
+    - id: Index
+      description: The index of the JSON object
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the JSON object is removed; otherwise, false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Remove the JSON object at the specified index in the JSON array.
+  name: RemoveJObjectFromCollection
+  uid: M:Codeunit::System#Text#Json#Json.RemoveJObjectFromCollection(Integer):Boolean
+- syntax:
+    content: 'procedure ReplaceJObjectInCollection(Index: Integer, Value: Text): Boolean'
+    parameters:
+    - id: Index
+      description: The index of the JSON object
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Value
+      description: The JSON object in text format
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the JSON object is replaced; otherwise, false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Replace the specified JSON object in the JSON array.
+  name: ReplaceJObjectInCollection
+  uid: M:Codeunit::System#Text#Json#Json.ReplaceJObjectInCollection(Integer,Text):Boolean
+commentId: O:Codeunit::System#Text#Json#Json
+name: Json
+uid: O:Codeunit::System#Text#Json#Json

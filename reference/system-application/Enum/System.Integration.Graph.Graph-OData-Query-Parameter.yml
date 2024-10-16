@@ -1,0 +1,88 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Graph."Graph OData Query Parameter"
+alId: ID 9352
+namespace: System.Integration.Graph
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration.Graph
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: >-
+    Query Parameter '$count'.
+
+    see: https://learn.microsoft.com/en-us/graph/query-parameters?tabs=http#count-parameter
+  name: count
+  uid: E:Enum::System#Integration#Graph#Graph_OData_Query_Parameter.count
+- summary: >-
+    OData Query Parameter '$expand'.
+
+    see: https://learn.microsoft.com/en-us/graph/query-parameters?tabs=http#expand-parameter
+  name: expand
+  uid: E:Enum::System#Integration#Graph#Graph_OData_Query_Parameter.expand
+- summary: >-
+    OData Query Parameter '$filter'.
+
+    see: https://learn.microsoft.com/en-us/graph/query-parameters?tabs=http#filter-parameter
+  name: filter
+  uid: E:Enum::System#Integration#Graph#Graph_OData_Query_Parameter.filter
+- summary: >-
+    OData Query Parameter '$format'.
+
+    see: https://learn.microsoft.com/en-us/graph/query-parameters?tabs=http#format-parameter
+  name: format
+  uid: E:Enum::System#Integration#Graph#Graph_OData_Query_Parameter.format
+- summary: >-
+    OData Query Parameter '$orderBy'.
+
+    see: https://learn.microsoft.com/en-us/graph/query-parameters?tabs=http#orderby-parameter
+  name: orderby
+  uid: E:Enum::System#Integration#Graph#Graph_OData_Query_Parameter.orderby
+- summary: >-
+    OData Query Parameter '$search'.
+
+    see: https://learn.microsoft.com/en-us/graph/query-parameters?tabs=http#search-parameter
+  name: search
+  uid: E:Enum::System#Integration#Graph#Graph_OData_Query_Parameter.search
+- summary: >-
+    OData Query Parameter '$select'.
+
+    see: https://learn.microsoft.com/en-us/graph/query-parameters?tabs=http#select-parameter
+  name: select
+  uid: E:Enum::System#Integration#Graph#Graph_OData_Query_Parameter.select
+- summary: >-
+    OData Query Parameter '$skip'.
+
+    see: https://learn.microsoft.com/en-us/graph/query-parameters?tabs=http#skip-parameter
+  name: skip
+  uid: E:Enum::System#Integration#Graph#Graph_OData_Query_Parameter.skip
+- summary: >-
+    OData Query Parameter '$skipToken'.
+
+    see: https://learn.microsoft.com/en-us/graph/query-parameters?tabs=http#skiptoken-parameter
+  name: skiptoken
+  uid: E:Enum::System#Integration#Graph#Graph_OData_Query_Parameter.skiptoken
+- summary: >-
+    OData Query Parameter '$top'.
+
+    see: https://learn.microsoft.com/en-us/graph/query-parameters?tabs=http#top-parameter
+  name: top
+  uid: E:Enum::System#Integration#Graph#Graph_OData_Query_Parameter.top
+commentId: O:Enum::System#Integration#Graph#Graph OData Query Parameter
+summary: >-
+  A Microsoft Graph API operation might support one or more of the following OData system query options.
+
+  These query options are compatible with the OData V4 query language and are supported only in GET operations.
+
+  See: hhttps://learn.microsoft.com/en-us/graph/query-parameters?tabs=http#odata-system-query-options
+name: '"Graph OData Query Parameter"'
+uid: O:Enum::System#Integration#Graph#Graph_OData_Query_Parameter

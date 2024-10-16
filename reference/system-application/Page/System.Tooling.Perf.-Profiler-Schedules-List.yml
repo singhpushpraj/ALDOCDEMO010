@@ -1,0 +1,50 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Tooling."Perf. Profiler Schedules List"
+alId: ID 1933
+namespace: System.Tooling
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Tooling
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Profiler Schedules
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: AboutTitle
+  value: About performance profile scheduling
+  promoted: false
+- name: AboutText
+  value: Schedule performance profiles to run at specific times based on different criteria to troubleshoot performance issues.
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: CardPageID
+  value: Perf. Profiler Schedule Card
+  promoted: false
+  xrefType:
+    internalReference: O:Page::System#Tooling#Perf#_Profiler_Schedule_Card
+    name: System.Tooling."Perf. Profiler Schedule Card"
+    isExternal: false
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: Permissions
+  value: tabledata "Performance Profile Scheduler" = rimd
+  promoted: false
+commentId: O:Page::System#Tooling#Perf# Profiler Schedules List
+summary: List for schedule based sampling profilers
+name: '"Perf. Profiler Schedules List"'
+uid: O:Page::System#Tooling#Perf#_Profiler_Schedules_List

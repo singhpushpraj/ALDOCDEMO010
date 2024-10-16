@@ -1,0 +1,157 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Plan Configuration"
+alId: ID 9825
+namespace: System.Azure.Identity
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsCustomized(PlanId: Guid): Boolean'
+    parameters:
+    - id: PlanId
+      description: The ID of the plan for which to check.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the plan configuration was customized; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if a plan configuration was customized.
+  name: IsCustomized
+  uid: M:Codeunit::System#Azure#Identity#Plan_Configuration.IsCustomized(Guid):Boolean
+events:
+- syntax:
+    signatures:
+    - '[Obsolete(Not needed when the user groups are removed.,22.0)]'
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnCustomPermissionSetChange(PlanId: Guid, RoleId: Code[20], AppId: Guid, Scope: Option, Company: Text[30])'
+    parameters:
+    - id: PlanId
+      description: The ID of the plan for which a permission set has changed.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: RoleId
+      description: The ID of the role(permission set) which changed
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: AppId
+      description: The ID of the app from which the permission set originates.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: Scope
+      description: The scope of the permission set.
+      parameterType:
+        name: Option
+        isExternal: true
+    - id: Company
+      description: The company for which to check.
+      parameterType:
+        name: Text[30]
+        isExternal: true
+  summary: Indicates whether a custom permission set assign to a plan has changed.
+  name: OnCustomPermissionSetChange
+  obsoletion:
+    state: pending
+    reason: Not needed when the user groups are removed.
+    version: "22.0"
+  uid: M:Codeunit::System#Azure#Identity#Plan_Configuration.OnCustomPermissionSetChange(Guid,Code[20],Guid,Option,Text[30])
+- syntax:
+    signatures:
+    - '[Obsolete(Not needed when the user groups are removed.,22.0)]'
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnAfterTransferPermissions(PlanId: Guid)'
+    parameters:
+    - id: PlanId
+      description: The ID of the plan.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Event for after default permissions has been transferred to custom.
+  name: OnAfterTransferPermissions
+  obsoletion:
+    state: pending
+    reason: Not needed when the user groups are removed.
+    version: "22.0"
+  uid: M:Codeunit::System#Azure#Identity#Plan_Configuration.OnAfterTransferPermissions(Guid)
+- syntax:
+    signatures:
+    - '[Obsolete(Not needed when the user groups are removed.,22.0)]'
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnAfterDeleteCustomPermissions(PlanId: Guid)'
+    parameters:
+    - id: PlanId
+      description: The ID of the plan.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Event for after custom permissions have been deleted and the corresponding plan configuration is no longer customized.
+  name: OnAfterDeleteCustomPermissions
+  obsoletion:
+    state: pending
+    reason: Not needed when the user groups are removed.
+    version: "22.0"
+  uid: M:Codeunit::System#Azure#Identity#Plan_Configuration.OnAfterDeleteCustomPermissions(Guid)
+- syntax:
+    signatures:
+    - '[Obsolete(Not needed when the user groups are removed.,22.0)]'
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnBeforeRemoveDefaultPermissionsFromUser(AccessControl: __MissingTypeSymbol__, var IsAssignedViaUserGroups: Boolean)'
+    parameters:
+    - id: AccessControl
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: IsAssignedViaUserGroups
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: OnBeforeRemoveDefaultPermissionsFromUser
+  obsoletion:
+    state: pending
+    reason: Not needed when the user groups are removed.
+    version: "22.0"
+  uid: M:Codeunit::System#Azure#Identity#Plan_Configuration.OnBeforeRemoveDefaultPermissionsFromUser(__MissingSymbol__,Boolean@)
+- syntax:
+    signatures:
+    - '[Obsolete(Not needed when the user groups are removed.,22.0)]'
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnBeforeRemoveCustomPermissionsFromUser(AccessControl: __MissingTypeSymbol__, var IsAssignedViaUserGroups: Boolean)'
+    parameters:
+    - id: AccessControl
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: IsAssignedViaUserGroups
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: OnBeforeRemoveCustomPermissionsFromUser
+  obsoletion:
+    state: pending
+    reason: Not needed when the user groups are removed.
+    version: "22.0"
+  uid: M:Codeunit::System#Azure#Identity#Plan_Configuration.OnBeforeRemoveCustomPermissionsFromUser(__MissingSymbol__,Boolean@)
+commentId: O:Codeunit::System#Azure#Identity#Plan Configuration
+summary: Provides functionality to operation with plan configurations and customized permission sets related to a plan.
+name: '"Plan Configuration"'
+uid: O:Codeunit::System#Azure#Identity#Plan_Configuration

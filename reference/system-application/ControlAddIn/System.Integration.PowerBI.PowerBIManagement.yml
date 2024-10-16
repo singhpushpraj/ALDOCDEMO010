@@ -1,0 +1,396 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.PowerBI.PowerBIManagement
+namespace: System.Integration.PowerBI
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: N:Module::System_Application::Namespace::System.Integration.PowerBI
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+methods:
+- syntax:
+    content: 'procedure SetToken(AuthToken: Text)'
+    parameters:
+    - id: AuthToken
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes the token to be used when embedding Power BI content
+  name: SetToken
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.SetToken(Text)
+- syntax:
+    content: 'procedure EmbedPowerBIReport(ReportLink: Text, ReportId: Text, PageName: Text)'
+    parameters:
+    - id: ReportLink
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ReportId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PageName
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes the Power BI embed Report into the page
+  name: EmbedPowerBIReport
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedPowerBIReport(Text,Text,Text)
+- syntax:
+    content: 'procedure EmbedPowerBIDashboard(DashboardLink: Text, DashboardId: Text)'
+    parameters:
+    - id: DashboardLink
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DashboardId
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes the Power BI embed Dashboard into the page
+  name: EmbedPowerBIDashboard
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedPowerBIDashboard(Text,Text)
+- syntax:
+    content: 'procedure EmbedPowerBIDashboardTile(DashboardTileLink: Text, DashboardId: Text, TileId: Text)'
+    parameters:
+    - id: DashboardTileLink
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DashboardId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TileId
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes the Power BI embed Dashboard Tile into the page
+  name: EmbedPowerBIDashboardTile
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedPowerBIDashboardTile(Text,Text,Text)
+- syntax:
+    content: 'procedure EmbedPowerBIReportVisual(ReportVisualLink: Text, ReportId: Text, PageName: Text, VisualName: Text)'
+    parameters:
+    - id: ReportVisualLink
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ReportId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PageName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: VisualName
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes the Power BI embed Report Visual into the page
+  name: EmbedPowerBIReportVisual
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedPowerBIReportVisual(Text,Text,Text,Text)
+- syntax:
+    content: procedure FullScreen()
+  summary: Enters full screen mode for the current embed
+  name: FullScreen
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.FullScreen
+- syntax:
+    content: 'procedure UpdateReportFilters(Filters: Text)'
+    parameters:
+    - id: Filters
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Updates the report filters with the provided new filters
+  remarks: The new filters will replace any existing report filter for the same table columns
+  name: UpdateReportFilters
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.UpdateReportFilters(Text)
+- syntax:
+    content: procedure RemoveReportFilters()
+  summary: Removes the current report level filters
+  name: RemoveReportFilters
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.RemoveReportFilters
+- syntax:
+    content: 'procedure UpdatePageFilters(Filters: Text)'
+    parameters:
+    - id: Filters
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Updates the page filters with the provided new filters
+  remarks: The new filters will replace any existing page filter for the same table columns
+  name: UpdatePageFilters
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.UpdatePageFilters(Text)
+- syntax:
+    content: procedure RemovePageFilters()
+  summary: Removes the current page level filters
+  name: RemovePageFilters
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.RemovePageFilters
+- syntax:
+    content: 'procedure SetPage(PageName: Text)'
+    parameters:
+    - id: PageName
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Changes the active page of the report
+  name: SetPage
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.SetPage(Text)
+- syntax:
+    content: 'procedure SetSettings(ShowBookmarkSelection: Boolean, ShowFilters: Boolean, ShowPageSelection: Boolean, ShowZoomBar: Boolean, ForceTransparentBackground: Boolean, ForceFitToPage: Boolean, AddBottomPadding: Boolean)'
+    parameters:
+    - id: ShowBookmarkSelection
+      description: Shows the bookmark selection pane.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: ShowFilters
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: ShowPageSelection
+      description: Shows the pane to select the report page.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: ShowZoomBar
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: ForceTransparentBackground
+      description: Forces a transparent background to the embed.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: ForceFitToPage
+      description: Forces the Fit To Page behaviour for the embed.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: AddBottomPadding
+      description: Controls whether a padding is needed on the bottom of the page (useful in case the embed is the only element displayed on the page).
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the properties for the embed experience
+  name: SetSettings
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.SetSettings(Boolean,Boolean,Boolean,Boolean,Boolean,Boolean,Boolean)
+- syntax:
+    signatures:
+    - '[Obsolete(Use SetSettings, SetToken and then EmbedReport instead.,25.0)]'
+    content: 'procedure InitializeFrame(FullPage: Boolean, Ratio: Text)'
+    parameters:
+    - id: FullPage
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: Ratio
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the properties for the browser frame containing the embed
+  name: InitializeFrame
+  obsoletion:
+    state: pending
+    reason: Use SetSettings, SetToken and then EmbedReport instead.
+    version: "25.0"
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.InitializeFrame(Boolean,Text)
+- syntax:
+    signatures:
+    - '[Obsolete(Use SetSettings, SetToken and then EmbedReport instead.,24.0)]'
+    content: 'procedure InitializeReport(ReportLink: Text, ReportId: Text, AuthToken: Text, PowerBIApi: Text)'
+    parameters:
+    - id: ReportLink
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ReportId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PowerBIApi
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes the Power BI Embed into the page
+  name: InitializeReport
+  obsoletion:
+    state: pending
+    reason: Use SetSettings, SetToken and then EmbedReport instead.
+    version: "24.0"
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.InitializeReport(Text,Text,Text,Text)
+- syntax:
+    signatures:
+    - '[Obsolete(Use SetSettings, SetToken and then EmbedReport instead.,25.0)]'
+    content: 'procedure EmbedReportWithOptions(ReportLink: Text, ReportId: Text, AuthToken: Text, PageName: Text, ShowPanes: Boolean)'
+    parameters:
+    - id: ReportLink
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ReportId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PageName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ShowPanes
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Initializes the Power BI embed Report into the page, with additional options
+  name: EmbedReportWithOptions
+  obsoletion:
+    state: pending
+    reason: Use SetSettings, SetToken and then EmbedReport instead.
+    version: "25.0"
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedReportWithOptions(Text,Text,Text,Text,Boolean)
+- syntax:
+    signatures:
+    - '[Obsolete(Switching between edit more and view mode is no longer supported. Only view mode will be supported going forward.,25.0)]'
+    content: procedure ViewMode()
+  summary: Changes the current mode into View
+  name: ViewMode
+  obsoletion:
+    state: pending
+    reason: Switching between edit more and view mode is no longer supported. Only view mode will be supported going forward.
+    version: "25.0"
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.ViewMode
+- syntax:
+    signatures:
+    - '[Obsolete(Switching between edit more and view mode is no longer supported. Only view mode will be supported going forward.,25.0)]'
+    content: procedure EditMode()
+  summary: Changes the current mode into Edit
+  name: EditMode
+  obsoletion:
+    state: pending
+    reason: Switching between edit more and view mode is no longer supported. Only view mode will be supported going forward.
+    version: "25.0"
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EditMode
+- syntax:
+    signatures:
+    - '[Obsolete(Call the procedure SetToken, and then use EmbedPowerBIReport instead.,25.0)]'
+    content: 'procedure EmbedReport(ReportLink: Text, ReportId: Text, AuthToken: Text, PageName: Text)'
+    parameters:
+    - id: ReportLink
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ReportId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PageName
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes the Power BI embed Report into the page
+  name: EmbedReport
+  obsoletion:
+    state: pending
+    reason: Call the procedure SetToken, and then use EmbedPowerBIReport instead.
+    version: "25.0"
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedReport(Text,Text,Text,Text)
+- syntax:
+    signatures:
+    - '[Obsolete(Call the procedure SetToken, and then use EmbedPowerBIDashboard instead.,25.0)]'
+    content: 'procedure EmbedDashboard(DashboardLink: Text, DashboardId: Text, AuthToken: Text)'
+    parameters:
+    - id: DashboardLink
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DashboardId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthToken
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes the Power BI embed Dashboard into the page
+  name: EmbedDashboard
+  obsoletion:
+    state: pending
+    reason: Call the procedure SetToken, and then use EmbedPowerBIDashboard instead.
+    version: "25.0"
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedDashboard(Text,Text,Text)
+- syntax:
+    signatures:
+    - '[Obsolete(Call the procedure SetToken, and then use the EmbedPowerBIDashboardTile instead.,25.0)]'
+    content: 'procedure EmbedDashboardTile(DashboardTileLink: Text, DashboardId: Text, TileId: Text, AuthToken: Text)'
+    parameters:
+    - id: DashboardTileLink
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DashboardId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TileId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthToken
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes the Power BI embed Dashboard Tile into the page
+  name: EmbedDashboardTile
+  obsoletion:
+    state: pending
+    reason: Call the procedure SetToken, and then use the EmbedPowerBIDashboardTile instead.
+    version: "25.0"
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedDashboardTile(Text,Text,Text,Text)
+- syntax:
+    signatures:
+    - '[Obsolete(Call the procedure SetToken, and then use EmbedPowerBIReportVisual instead.,25.0)]'
+    content: 'procedure EmbedReportVisual(ReportVisualLink: Text, ReportId: Text, PageName: Text, VisualName: Text, AuthToken: Text)'
+    parameters:
+    - id: ReportVisualLink
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ReportId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PageName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: VisualName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthToken
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes the Power BI embed Report Visual into the page
+  name: EmbedReportVisual
+  obsoletion:
+    state: pending
+    reason: Call the procedure SetToken, and then use EmbedPowerBIReportVisual instead.
+    version: "25.0"
+  uid: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.EmbedReportVisual(Text,Text,Text,Text,Text)
+commentId: O:ControlAddIn::System#Integration#PowerBI#PowerBIManagement
+name: PowerBIManagement
+uid: O:ControlAddIn::System#Integration#PowerBI#PowerBIManagement

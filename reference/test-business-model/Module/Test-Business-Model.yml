@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: Test Business Model by Test Sverige AB (1.0.0.19)
+baseKind: Module
+kind: Module
+objectProperties:
+- name: Version
+  value: 1.0.0.19
+  promoted: false
+- name: Publisher
+  value: Test Sverige AB
+  promoted: false
+summary: ""
+name: Test Business Model
+uid: N:Module::Test_Business_Model

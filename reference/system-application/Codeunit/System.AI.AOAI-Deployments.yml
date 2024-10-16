@@ -1,0 +1,178 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."AOAI Deployments"
+alId: ID 7768
+namespace: System.AI
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[Obsolete(Specific deployment names are no longer supported. Use GetGPT35TurboLatest and GetGPT4Latest instead (or GetGPT35TurboPreview and GetGPT4Preview for testing upcoming versions).,25.0)]'
+    content: 'procedure GetTurbo0301(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of the AOAI deployment model Turbo 0301.
+  name: GetTurbo0301
+  obsoletion:
+    state: pending
+    reason: Specific deployment names are no longer supported. Use GetGPT35TurboLatest and GetGPT4Latest instead (or GetGPT35TurboPreview and GetGPT4Preview for testing upcoming versions).
+    version: "25.0"
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetTurbo0301:Text
+- syntax:
+    signatures:
+    - '[Obsolete(Specific deployment names are no longer supported. Use GetGPT35TurboLatest and GetGPT4Latest instead (or GetGPT35TurboPreview and GetGPT4Preview for testing upcoming versions).,25.0)]'
+    content: 'procedure GetGPT40613(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of the AOAI deployment model GPT4 0613.
+  name: GetGPT40613
+  obsoletion:
+    state: pending
+    reason: Specific deployment names are no longer supported. Use GetGPT35TurboLatest and GetGPT4Latest instead (or GetGPT35TurboPreview and GetGPT4Preview for testing upcoming versions).
+    version: "25.0"
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT40613:Text
+- syntax:
+    signatures:
+    - '[Obsolete(Specific deployment names are no longer supported. Use GetGPT35TurboLatest and GetGPT4Latest instead (or GetGPT35TurboPreview and GetGPT4Preview for testing upcoming versions).,25.0)]'
+    content: 'procedure GetTurbo0613(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of the AOAI deployment model Turbo 0613.
+  name: GetTurbo0613
+  obsoletion:
+    state: pending
+    reason: Specific deployment names are no longer supported. Use GetGPT35TurboLatest and GetGPT4Latest instead (or GetGPT35TurboPreview and GetGPT4Preview for testing upcoming versions).
+    version: "25.0"
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetTurbo0613:Text
+- syntax:
+    signatures:
+    - '[Obsolete(GPT35 Turbo is no longer supported. Use GetGPT4oMiniLatest instead (or GetGPT4oMiniPreview for testing upcoming versions).,25.0)]'
+    content: 'procedure GetGPT35TurboLatest(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of the latest AOAI deployment model of GPT3.5 Turbo.
+  name: GetGPT35TurboLatest
+  obsoletion:
+    state: pending
+    reason: GPT35 Turbo is no longer supported. Use GetGPT4oMiniLatest instead (or GetGPT4oMiniPreview for testing upcoming versions).
+    version: "25.0"
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT35TurboLatest:Text
+- syntax:
+    signatures:
+    - '[Obsolete(GPT35 Turbo is no longer supported. Use GetGPT4oMiniLatest instead (or GetGPT4oMiniPreview for testing upcoming versions).,25.0)]'
+    content: 'procedure GetGPT35TurboPreview(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of preview AOAI deployment model of GPT3.5 Turbo.
+  name: GetGPT35TurboPreview
+  obsoletion:
+    state: pending
+    reason: GPT35 Turbo is no longer supported. Use GetGPT4oMiniLatest instead (or GetGPT4oMiniPreview for testing upcoming versions).
+    version: "25.0"
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT35TurboPreview:Text
+- syntax:
+    signatures:
+    - '[Obsolete(Generic GPT4 deployment name is no longer supported. Use GetGPT4oLatest instead (or GetGPT4oPreview for testing upcoming versions).,25.0)]'
+    content: 'procedure GetGPT4Latest(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of the latest AOAI deployment model of GPT4.
+  name: GetGPT4Latest
+  obsoletion:
+    state: pending
+    reason: Generic GPT4 deployment name is no longer supported. Use GetGPT4oLatest instead (or GetGPT4oPreview for testing upcoming versions).
+    version: "25.0"
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT4Latest:Text
+- syntax:
+    signatures:
+    - '[Obsolete(Generic GPT4 deployment name is no longer supported. Use GetGPT4oLatest instead (or GetGPT4oPreview for testing upcoming versions).,25.0)]'
+    content: 'procedure GetGPT4Preview(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of preview AOAI deployment model of GPT4.
+  name: GetGPT4Preview
+  obsoletion:
+    state: pending
+    reason: Generic GPT4 deployment name is no longer supported. Use GetGPT4oLatest instead (or GetGPT4oPreview for testing upcoming versions).
+    version: "25.0"
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT4Preview:Text
+- syntax:
+    content: 'procedure GetGPT4oLatest(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of the latest AOAI deployment model of GPT4o.
+  name: GetGPT4oLatest
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT4oLatest:Text
+- syntax:
+    content: 'procedure GetGPT4oPreview(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of preview AOAI deployment model of GPT4o.
+  name: GetGPT4oPreview
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT4oPreview:Text
+- syntax:
+    content: 'procedure GetGPT4oMiniLatest(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of the latest AOAI deployment model of GPT4o-Mini.
+  name: GetGPT4oMiniLatest
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT4oMiniLatest:Text
+- syntax:
+    content: 'procedure GetGPT4oMiniPreview(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of preview AOAI deployment model of GPT4o-Mini.
+  name: GetGPT4oMiniPreview
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT4oMiniPreview:Text
+commentId: O:Codeunit::System#AI#AOAI Deployments
+summary: This codeunit is used to get the AOAI deployment names.
+name: '"AOAI Deployments"'
+uid: O:Codeunit::System#AI#AOAI_Deployments

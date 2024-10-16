@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Graph."Graph Request Header"
+alId: ID 9353
+namespace: System.Integration.Graph
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration.Graph
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: If-Match Request Header
+  name: '"If-Match"'
+  uid: E:Enum::System#Integration#Graph#Graph_Request_Header.If-Match
+- summary: If-None-Match Request Header
+  name: '"If-None-Match"'
+  uid: E:Enum::System#Integration#Graph#Graph_Request_Header.If-None-Match
+- summary: Prefer Request Header
+  name: Prefer
+  uid: E:Enum::System#Integration#Graph#Graph_Request_Header.Prefer
+- summary: ConsistencyLevel Request Header
+  name: ConsistencyLevel
+  uid: E:Enum::System#Integration#Graph#Graph_Request_Header.ConsistencyLevel
+commentId: O:Enum::System#Integration#Graph#Graph Request Header
+summary: The supported request header for the Microsoft Graph API
+name: '"Graph Request Header"'
+uid: O:Enum::System#Integration#Graph#Graph_Request_Header

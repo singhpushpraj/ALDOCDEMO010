@@ -1,0 +1,22 @@
+﻿{
+  "Modules": [
+    {
+      "AppId": "c71b5edc-c899-4f24-9851-b67a0c1afe60",
+      "Name": "Test Trade Finance Module",
+      "Publisher": "Test Sverige AB",
+      "Version": "1.2.0.2"
+    },
+    {
+      "AppId": "9c57a890-6b9a-476f-a1a1-26377b09ab4a",
+      "Name": "Test Business Model",
+      "Publisher": "Test Sverige AB",
+      "Version": "1.0.0.19"
+    },
+    {
+      "AppId": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
+      "Name": "System Application",
+      "Publisher": "Microsoft",
+      "Version": "25.0.23364.25488"
+    }
+  ]
+}

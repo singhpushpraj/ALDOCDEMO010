@@ -1,0 +1,889 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../public/aldoc_logo.svg" alt="Documentation">
+            Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="O:Codeunit::System#Integration#Page_Summary_Provider">
+  <h1>Codeunit &quot;Page Summary Provider&quot;</h1>
+
+
+<div class="font-style-italic">ID 2718</div>
+<div class="font-style-italic">Namespace: System.Integration</div>
+
+
+
+
+  	<div class="summaryHolder">
+  		<div class="summary">
+			<p>Exposes functionality that gets page summary for a selected page.
+This codeunit is exposed as a webservice and hence all functions are available through OData calls.</p>
+
+  		</div>
+  	</div>
+
+
+
+  	<h2 id="properties">Properties</h2>
+
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Value</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  					<td>Access</td>
+  					<td class="font-style-italic">
+							Public
+  					</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	<h2 id="methods">Methods</h2>
+   <h3 class="memberNameHolder">GetPageSummary</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetPageSummary(PageId: Integer, Bookmark: Text): Text</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								PageId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Bookmark
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>Text value for the page summary in JSON format.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>{
+&quot;version&quot;:&quot;1.1&quot;,
+&quot;pageCaption&quot;:&quot;Customer Card&quot;,
+&quot;pageType&quot;:&quot;Card&quot;,
+&quot;summaryType&quot;:&quot;Brick&quot;,
+&quot;cardPageId&quot;: &quot;0&quot;,
+&quot;url&quot;:&quot;https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&amp;page=22&amp;bookmark=27%3bEgAAAAJ7CDAAMQA5ADAANQA4ADkAMw%3d%3&quot;,
+&quot;fields&quot;:[
+{&quot;caption&quot;:&quot;No.&quot;,&quot;fieldValue&quot;:&quot;01445544&quot;,&quot;fieldType&quot;:&quot;Code&quot;, &quot;tooltip&quot;:&quot;Specifies the number of the customer.&quot;},
+{&quot;caption&quot;:&quot;Name&quot;,&quot;fieldValue&quot;:&quot;Progressive Home Furnishings&quot;,&quot;fieldType&quot;:&quot;Text&quot;,&quot;tooltip&quot;:&quot;Specifies the customer's name. This name will appear on all sales documents for the customer.&quot;},
+{&quot;caption&quot;:&quot;Contact&quot;,&quot;fieldValue&quot;:&quot;Mr. Scott Mitchell&quot;,&quot;fieldType&quot;:&quot;Text&quot;, &quot;tooltip&quot;:&quot;Specifies the name of the person you regularly contact when you do business with this customer.&quot;},
+{&quot;caption&quot;:&quot;Balance Due (LCY)&quot;,&quot;fieldValue&quot;:&quot;1.499,03&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the payment amount that the customer owes for completed sales.&quot;}],
+&quot;recordFields&quot;:[
+{&quot;caption&quot;:&quot;No.&quot;,&quot;fieldValue&quot;:&quot;01121212&quot;,&quot;fieldType&quot;:&quot;Code&quot;,&quot;tooltip&quot;:&quot;Specifies the number of the customer.&quot;},
+{&quot;caption&quot;:&quot;Name&quot;,&quot;fieldValue&quot;:&quot;Spotsmeyer's Furnishings&quot;,&quot;fieldType&quot;:&quot;Text&quot;,&quot;tooltip&quot;:&quot;Specifies the customer's name. This name will appear on all sales documents for the customer.&quot;},
+{&quot;caption&quot;:&quot;Balance (LCY)&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the payment amount that the customer owes for completed sales. This value is also known as the customer's balance.&quot;},
+{&quot;caption&quot;:&quot;Balance Due (LCY)&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies payments from the customer that are overdue per today's date.&quot;},
+{&quot;caption&quot;:&quot;Credit Limit (LCY)&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the maximum amount you allow the customer to exceed the payment balance before warnings are issued.&quot;},
+{&quot;caption&quot;:&quot;Blocked&quot;,&quot;fieldValue&quot;:&quot; &quot;,&quot;fieldType&quot;:&quot;Option&quot;,&quot;tooltip&quot;:&quot;Specifies which transactions with the customer that cannot be processed, for example, because the customer is insolvent.&quot;},
+{&quot;caption&quot;:&quot;Privacy Blocked&quot;,&quot;fieldValue&quot;:&quot;No&quot;,&quot;fieldType&quot;:&quot;Boolean&quot;,&quot;tooltip&quot;:&quot;Specifies whether to limit access to data for the data subject during daily operations. This is useful, for example, when protecting data from changes while it is under privacy review.&quot;},
+{&quot;caption&quot;:&quot;Salesperson Code&quot;,&quot;fieldValue&quot;:&quot;JR&quot;,&quot;fieldType&quot;:&quot;Code&quot;,&quot;tooltip&quot;:&quot;Specifies a code for the salesperson who normally handles this customer's account.&quot;},
+{&quot;caption&quot;:&quot;Service Zone Code&quot;,&quot;fieldValue&quot;:&quot;X&quot;,&quot;fieldType&quot;:&quot;Code&quot;,&quot;tooltip&quot;:&quot;Specifies the code for the service zone that is assigned to the customer.&quot;},
+{&quot;caption&quot;:&quot;Address&quot;,&quot;fieldValue&quot;:&quot;612 South Sunset Drive&quot;,&quot;fieldType&quot;:&quot;Text&quot;,&quot;tooltip&quot;:&quot;Specifies the customer's address. This address will appear on all sales documents for the customer.&quot;}
+{&quot;caption&quot;:&quot;Payments This Year&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the sum of payments received from the customer in the current fiscal year.&quot;},
+{&quot;caption&quot;:&quot;Last Date Modified&quot;,&quot;fieldValue&quot;:&quot;08/02/24&quot;,&quot;fieldType&quot;:&quot;Date&quot;,&quot;tooltip&quot;:&quot;Specifies when the customer card was last modified.&quot;}]
+}</p>
+<p>In case of an error:
+{
+&quot;version&quot;:&quot;1.1&quot;,
+&quot;pageCaption&quot;:&quot;Customer Card&quot;,
+&quot;pageType&quot;:&quot;Card&quot;,
+&quot;summaryType&quot;:&quot;Caption&quot;,
+&quot;error&quot;:[
+&quot;code&quot;:&quot;InvalidBookmark&quot;
+&quot;message&quot;:&quot;The bookmark is invalid.&quot;
+]
+}</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetPageSummaryBySystemID</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetPageSummaryBySystemID(PageId: Integer, SystemId: Guid): Text</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								PageId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SystemId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>Text value for the page summary in JSON format.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>{
+&quot;version&quot;:&quot;1.1&quot;,
+&quot;pageCaption&quot;:&quot;Customer Card&quot;,
+&quot;pageType&quot;:&quot;Card&quot;,
+&quot;summaryType&quot;:&quot;Brick&quot;,
+&quot;cardPageId&quot;: &quot;0&quot;,
+&quot;url&quot;:&quot;https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&amp;page=22&amp;bookmark=27%3bEgAAAAJ7CDAAMQA5ADAANQA4ADkAMw%3d%3&quot;,
+&quot;fields&quot;:[
+{&quot;caption&quot;:&quot;No.&quot;,&quot;fieldValue&quot;:&quot;01445544&quot;,&quot;fieldType&quot;:&quot;Code&quot;, &quot;tooltip&quot;:&quot;Specifies the number of the customer.&quot;},
+{&quot;caption&quot;:&quot;Name&quot;,&quot;fieldValue&quot;:&quot;Progressive Home Furnishings&quot;,&quot;fieldType&quot;:&quot;Text&quot;,&quot;tooltip&quot;:&quot;Specifies the customer's name. This name will appear on all sales documents for the customer.&quot;},
+{&quot;caption&quot;:&quot;Contact&quot;,&quot;fieldValue&quot;:&quot;Mr. Scott Mitchell&quot;,&quot;fieldType&quot;:&quot;Text&quot;, &quot;tooltip&quot;:&quot;Specifies the name of the person you regularly contact when you do business with this customer.&quot;},
+{&quot;caption&quot;:&quot;Balance Due (LCY)&quot;,&quot;fieldValue&quot;:&quot;1.499,03&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the payment amount that the customer owes for completed sales.&quot;}],
+&quot;recordFields&quot;:[
+{&quot;caption&quot;:&quot;No.&quot;,&quot;fieldValue&quot;:&quot;01121212&quot;,&quot;fieldType&quot;:&quot;Code&quot;,&quot;tooltip&quot;:&quot;Specifies the number of the customer.&quot;},
+{&quot;caption&quot;:&quot;Name&quot;,&quot;fieldValue&quot;:&quot;Spotsmeyer's Furnishings&quot;,&quot;fieldType&quot;:&quot;Text&quot;,&quot;tooltip&quot;:&quot;Specifies the customer's name. This name will appear on all sales documents for the customer.&quot;},
+{&quot;caption&quot;:&quot;Balance (LCY)&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the payment amount that the customer owes for completed sales. This value is also known as the customer's balance.&quot;},
+{&quot;caption&quot;:&quot;Balance Due (LCY)&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies payments from the customer that are overdue per today's date.&quot;},
+{&quot;caption&quot;:&quot;Credit Limit (LCY)&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the maximum amount you allow the customer to exceed the payment balance before warnings are issued.&quot;},
+{&quot;caption&quot;:&quot;Blocked&quot;,&quot;fieldValue&quot;:&quot; &quot;,&quot;fieldType&quot;:&quot;Option&quot;,&quot;tooltip&quot;:&quot;Specifies which transactions with the customer that cannot be processed, for example, because the customer is insolvent.&quot;},
+{&quot;caption&quot;:&quot;Privacy Blocked&quot;,&quot;fieldValue&quot;:&quot;No&quot;,&quot;fieldType&quot;:&quot;Boolean&quot;,&quot;tooltip&quot;:&quot;Specifies whether to limit access to data for the data subject during daily operations. This is useful, for example, when protecting data from changes while it is under privacy review.&quot;},
+{&quot;caption&quot;:&quot;Salesperson Code&quot;,&quot;fieldValue&quot;:&quot;JR&quot;,&quot;fieldType&quot;:&quot;Code&quot;,&quot;tooltip&quot;:&quot;Specifies a code for the salesperson who normally handles this customer's account.&quot;},
+{&quot;caption&quot;:&quot;Service Zone Code&quot;,&quot;fieldValue&quot;:&quot;X&quot;,&quot;fieldType&quot;:&quot;Code&quot;,&quot;tooltip&quot;:&quot;Specifies the code for the service zone that is assigned to the customer.&quot;},
+{&quot;caption&quot;:&quot;Address&quot;,&quot;fieldValue&quot;:&quot;612 South Sunset Drive&quot;,&quot;fieldType&quot;:&quot;Text&quot;,&quot;tooltip&quot;:&quot;Specifies the customer's address. This address will appear on all sales documents for the customer.&quot;}
+{&quot;caption&quot;:&quot;Payments This Year&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the sum of payments received from the customer in the current fiscal year.&quot;},
+{&quot;caption&quot;:&quot;Last Date Modified&quot;,&quot;fieldValue&quot;:&quot;08/02/24&quot;,&quot;fieldType&quot;:&quot;Date&quot;,&quot;tooltip&quot;:&quot;Specifies when the customer card was last modified.&quot;}]
+}</p>
+<p>In case of an error:
+{
+&quot;version&quot;:&quot;1.1&quot;,
+&quot;pageCaption&quot;:&quot;Customer Card&quot;,
+&quot;pageType&quot;:&quot;Card&quot;,
+&quot;summaryType&quot;:&quot;Caption&quot;,
+&quot;error&quot;:[
+&quot;code&quot;:&quot;InvalidSystemId&quot;
+&quot;message&quot;:&quot;The system id is invalid.&quot;
+]
+}</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetPageSummary</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetPageSummary(PageId: Integer): Text</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								PageId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>Text value for the page summary in JSON format.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>{
+&quot;version&quot;:&quot;1.1&quot;,
+&quot;pageCaption&quot;:&quot;Customer Card&quot;,
+&quot;pageType&quot;:&quot;Card&quot;,
+&quot;summaryType&quot;:&quot;Caption&quot;,
+}</p>
+<p>In case of error:
+{
+&quot;version&quot;:&quot;1.1&quot;,
+&quot;pageCaption&quot;:&quot;Customer Card&quot;,
+&quot;pageType&quot;:&quot;Card&quot;,
+&quot;summaryType&quot;:&quot;Caption&quot;,
+&quot;error&quot;:[
+&quot;code&quot;:&quot;error code&quot;
+&quot;message&quot;:&quot;error message&quot;
+]
+}</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetPageSummary</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetPageSummary(Parameters: Text): Text</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Parameters
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>Text value for the page summary in JSON format.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>{
+&quot;version&quot;:&quot;1.1&quot;,
+&quot;pageCaption&quot;:&quot;Customer Card&quot;,
+&quot;pageType&quot;:&quot;Card&quot;,
+&quot;summaryType&quot;:&quot;Brick&quot;,
+&quot;cardPageId&quot;: &quot;0&quot;,
+&quot;url&quot;:&quot;https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&amp;page=22&amp;bookmark=27%3bEgAAAAJ7CDAAMQA5ADAANQA4ADkAMw%3d%3&quot;,
+&quot;fields&quot;:[
+{&quot;caption&quot;:&quot;No.&quot;,&quot;fieldValue&quot;:&quot;01445544&quot;,&quot;fieldType&quot;:&quot;Code&quot;, &quot;tooltip&quot;:&quot;Specifies the number of the customer.&quot;},
+{&quot;caption&quot;:&quot;Name&quot;,&quot;fieldValue&quot;:&quot;Progressive Home Furnishings&quot;,&quot;fieldType&quot;:&quot;Text&quot;,&quot;tooltip&quot;:&quot;Specifies the customer's name. This name will appear on all sales documents for the customer.&quot;},
+{&quot;caption&quot;:&quot;Contact&quot;,&quot;fieldValue&quot;:&quot;Mr. Scott Mitchell&quot;,&quot;fieldType&quot;:&quot;Text&quot;, &quot;tooltip&quot;:&quot;Specifies the name of the person you regularly contact when you do business with this customer.&quot;},
+{&quot;caption&quot;:&quot;Balance Due (LCY)&quot;,&quot;fieldValue&quot;:&quot;1.499,03&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the payment amount that the customer owes for completed sales.&quot;}],
+&quot;recordFields&quot;:[
+{&quot;caption&quot;:&quot;No.&quot;,&quot;fieldValue&quot;:&quot;01121212&quot;,&quot;fieldType&quot;:&quot;Code&quot;,&quot;tooltip&quot;:&quot;Specifies the number of the customer.&quot;},
+{&quot;caption&quot;:&quot;Name&quot;,&quot;fieldValue&quot;:&quot;Spotsmeyer's Furnishings&quot;,&quot;fieldType&quot;:&quot;Text&quot;,&quot;tooltip&quot;:&quot;Specifies the customer's name. This name will appear on all sales documents for the customer.&quot;},
+{&quot;caption&quot;:&quot;Balance (LCY)&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the payment amount that the customer owes for completed sales. This value is also known as the customer's balance.&quot;},
+{&quot;caption&quot;:&quot;Balance Due (LCY)&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies payments from the customer that are overdue per today's date.&quot;},
+{&quot;caption&quot;:&quot;Credit Limit (LCY)&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the maximum amount you allow the customer to exceed the payment balance before warnings are issued.&quot;},
+{&quot;caption&quot;:&quot;Blocked&quot;,&quot;fieldValue&quot;:&quot; &quot;,&quot;fieldType&quot;:&quot;Option&quot;,&quot;tooltip&quot;:&quot;Specifies which transactions with the customer that cannot be processed, for example, because the customer is insolvent.&quot;},
+{&quot;caption&quot;:&quot;Privacy Blocked&quot;,&quot;fieldValue&quot;:&quot;No&quot;,&quot;fieldType&quot;:&quot;Boolean&quot;,&quot;tooltip&quot;:&quot;Specifies whether to limit access to data for the data subject during daily operations. This is useful, for example, when protecting data from changes while it is under privacy review.&quot;},
+{&quot;caption&quot;:&quot;Salesperson Code&quot;,&quot;fieldValue&quot;:&quot;JR&quot;,&quot;fieldType&quot;:&quot;Code&quot;,&quot;tooltip&quot;:&quot;Specifies a code for the salesperson who normally handles this customer's account.&quot;},
+{&quot;caption&quot;:&quot;Service Zone Code&quot;,&quot;fieldValue&quot;:&quot;X&quot;,&quot;fieldType&quot;:&quot;Code&quot;,&quot;tooltip&quot;:&quot;Specifies the code for the service zone that is assigned to the customer.&quot;},
+{&quot;caption&quot;:&quot;Address&quot;,&quot;fieldValue&quot;:&quot;612 South Sunset Drive&quot;,&quot;fieldType&quot;:&quot;Text&quot;,&quot;tooltip&quot;:&quot;Specifies the customer's address. This address will appear on all sales documents for the customer.&quot;}
+{&quot;caption&quot;:&quot;Payments This Year&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the sum of payments received from the customer in the current fiscal year.&quot;},
+{&quot;caption&quot;:&quot;Last Date Modified&quot;,&quot;fieldValue&quot;:&quot;08/02/24&quot;,&quot;fieldType&quot;:&quot;Date&quot;,&quot;tooltip&quot;:&quot;Specifies when the customer card was last modified.&quot;}]
+}</p>
+<p>In case of an error:
+{
+&quot;version&quot;:&quot;1.1&quot;,
+&quot;pageCaption&quot;:&quot;Customer Card&quot;,
+&quot;pageType&quot;:&quot;Card&quot;,
+&quot;summaryType&quot;:&quot;Caption&quot;,
+&quot;error&quot;:[
+&quot;code&quot;:&quot;InvalidSystemId&quot;
+&quot;message&quot;:&quot;The system id is invalid.&quot;
+]
+}</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetPageUrlBySystemID</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetPageUrlBySystemID(PageId: Integer, SystemId: Guid): Text</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								PageId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SystemId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>Text value for the page url info in JSON format.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>{
+&quot;version&quot;:&quot;1.1&quot;,
+&quot;url&quot;:&quot;https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&amp;page=22&amp;bookmark=27%3bEgAAAAJ7CDAAMQA5ADAANQA4ADkAMw%3d%3&quot;,
+}</p>
+<p>In case of an error:
+{
+&quot;version&quot;:&quot;1.1&quot;,
+&quot;error&quot;:[
+&quot;code&quot;:&quot;InvalidSystemId&quot;
+&quot;message&quot;:&quot;The system id is invalid.&quot;
+]
+}</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetVersion</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the current version of the Page Summary Provider.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetVersion(): Text[30]</code></pre>
+
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text[30]               </td>
+   						<td>
+							<p>Text value for the current version of Page Summary Provider.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetPageSummary</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetPageSummary(PageSummaryParameters: Record &quot;Page Summary Parameters&quot; temporary): Text</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								PageSummaryParameters
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Page Summary Parameters&quot; temporary                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>Text value for the page summary in JSON format.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>{
+&quot;version&quot;:&quot;1.1&quot;,
+&quot;pageCaption&quot;:&quot;Customer Card&quot;,
+&quot;pageType&quot;:&quot;Card&quot;,
+&quot;summaryType&quot;:&quot;Brick&quot;,
+&quot;cardPageId&quot;: &quot;0&quot;,
+&quot;url&quot;:&quot;https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&amp;page=22&amp;bookmark=27%3bEgAAAAJ7CDAAMQA5ADAANQA4ADkAMw%3d%3&quot;,
+&quot;fields&quot;:[
+{&quot;caption&quot;:&quot;No.&quot;,&quot;fieldValue&quot;:&quot;01445544&quot;,&quot;fieldType&quot;:&quot;Code&quot;, &quot;tooltip&quot;:&quot;Specifies the number of the customer.&quot;},
+{&quot;caption&quot;:&quot;Name&quot;,&quot;fieldValue&quot;:&quot;Progressive Home Furnishings&quot;,&quot;fieldType&quot;:&quot;Text&quot;,&quot;tooltip&quot;:&quot;Specifies the customer's name. This name will appear on all sales documents for the customer.&quot;},
+{&quot;caption&quot;:&quot;Contact&quot;,&quot;fieldValue&quot;:&quot;Mr. Scott Mitchell&quot;,&quot;fieldType&quot;:&quot;Text&quot;, &quot;tooltip&quot;:&quot;Specifies the name of the person you regularly contact when you do business with this customer.&quot;},
+{&quot;caption&quot;:&quot;Balance Due (LCY)&quot;,&quot;fieldValue&quot;:&quot;1.499,03&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the payment amount that the customer owes for completed sales.&quot;}],
+&quot;recordFields&quot;:[
+{&quot;caption&quot;:&quot;No.&quot;,&quot;fieldValue&quot;:&quot;01121212&quot;,&quot;fieldType&quot;:&quot;Code&quot;,&quot;tooltip&quot;:&quot;Specifies the number of the customer.&quot;},
+{&quot;caption&quot;:&quot;Name&quot;,&quot;fieldValue&quot;:&quot;Spotsmeyer's Furnishings&quot;,&quot;fieldType&quot;:&quot;Text&quot;,&quot;tooltip&quot;:&quot;Specifies the customer's name. This name will appear on all sales documents for the customer.&quot;},
+{&quot;caption&quot;:&quot;Balance (LCY)&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the payment amount that the customer owes for completed sales. This value is also known as the customer's balance.&quot;},
+{&quot;caption&quot;:&quot;Balance Due (LCY)&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies payments from the customer that are overdue per today's date.&quot;},
+{&quot;caption&quot;:&quot;Credit Limit (LCY)&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the maximum amount you allow the customer to exceed the payment balance before warnings are issued.&quot;},
+{&quot;caption&quot;:&quot;Blocked&quot;,&quot;fieldValue&quot;:&quot; &quot;,&quot;fieldType&quot;:&quot;Option&quot;,&quot;tooltip&quot;:&quot;Specifies which transactions with the customer that cannot be processed, for example, because the customer is insolvent.&quot;},
+{&quot;caption&quot;:&quot;Privacy Blocked&quot;,&quot;fieldValue&quot;:&quot;No&quot;,&quot;fieldType&quot;:&quot;Boolean&quot;,&quot;tooltip&quot;:&quot;Specifies whether to limit access to data for the data subject during daily operations. This is useful, for example, when protecting data from changes while it is under privacy review.&quot;},
+{&quot;caption&quot;:&quot;Salesperson Code&quot;,&quot;fieldValue&quot;:&quot;JR&quot;,&quot;fieldType&quot;:&quot;Code&quot;,&quot;tooltip&quot;:&quot;Specifies a code for the salesperson who normally handles this customer's account.&quot;},
+{&quot;caption&quot;:&quot;Service Zone Code&quot;,&quot;fieldValue&quot;:&quot;X&quot;,&quot;fieldType&quot;:&quot;Code&quot;,&quot;tooltip&quot;:&quot;Specifies the code for the service zone that is assigned to the customer.&quot;},
+{&quot;caption&quot;:&quot;Address&quot;,&quot;fieldValue&quot;:&quot;612 South Sunset Drive&quot;,&quot;fieldType&quot;:&quot;Text&quot;,&quot;tooltip&quot;:&quot;Specifies the customer's address. This address will appear on all sales documents for the customer.&quot;}
+{&quot;caption&quot;:&quot;Payments This Year&quot;,&quot;fieldValue&quot;:&quot;0&quot;,&quot;fieldType&quot;:&quot;Decimal&quot;,&quot;tooltip&quot;:&quot;Specifies the sum of payments received from the customer in the current fiscal year.&quot;},
+{&quot;caption&quot;:&quot;Last Date Modified&quot;,&quot;fieldValue&quot;:&quot;08/02/24&quot;,&quot;fieldType&quot;:&quot;Date&quot;,&quot;tooltip&quot;:&quot;Specifies when the customer card was last modified.&quot;}]
+}</p>
+<p>In case of an error:
+{
+&quot;version&quot;:&quot;1.1&quot;,
+&quot;pageCaption&quot;:&quot;Customer Card&quot;,
+&quot;pageType&quot;:&quot;Card&quot;,
+&quot;summaryType&quot;:&quot;Caption&quot;,
+&quot;error&quot;:[
+&quot;code&quot;:&quot;InvalidSystemId&quot;
+&quot;message&quot;:&quot;The system id is invalid.&quot;
+]
+}</p>
+
+
+   </div>
+  	<h2 id="events">Events</h2>
+   <h3 class="memberNameHolder">OnBeforeGetPageSummary</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Allows changing which fields and values are returned when fetching page summary.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnBeforeGetPageSummary(PageId: Integer, RecId: RecordId, var FieldsJsonArray: JsonArray, var Handled: Boolean)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								PageId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RecId
+   							</td>
+   							<td class="font-style-italic">
+RecordId                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FieldsJsonArray
+   							</td>
+   							<td class="font-style-italic">
+JsonArray                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Handled
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnAfterGetSummaryFields</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Allows changing which fields are shown when fetching page summary, including their order.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnAfterGetSummaryFields(PageId: Integer, RecId: RecordId, var FieldList: List of [Integer])</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								PageId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RecId
+   							</td>
+   							<td class="font-style-italic">
+RecordId                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FieldList
+   							</td>
+   							<td class="font-style-italic">
+List of [Integer]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">OnAfterGetPageSummary</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Allows changing which fields and values are returned just before sending the response.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[IntegrationEvent(False,False)]
+internal procedure OnAfterGetPageSummary(PageId: Integer, RecId: RecordId, var FieldsJsonArray: JsonArray)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								PageId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RecId
+   							</td>
+   							<td class="font-style-italic">
+RecordId                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FieldsJsonArray
+   							</td>
+   							<td class="font-style-italic">
+JsonArray                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+
+  	<h2 id="see-also">See also</h2>
+  	<ul>
+  			<li><p><a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object">Codeunit</a></p>
+</li>
+  	</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Made with <a href="https://go.microsoft.com/fwlink/?linkid=2247728">ALDoc</a> and <a href="https://dotnet.github.io/docfx">DocFx</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

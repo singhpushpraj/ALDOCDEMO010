@@ -1,0 +1,42 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."AOAI Tool Invoke Preference"
+alId: ID 7776
+namespace: System.AI
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: >-
+    Only invoke the tool calls returned from the LLM, do not send the results back to the LLM.
+
+    Appends the tool results to the chat history.
+  remarks: This is the default preference.
+  name: '"Invoke Tools Only"'
+  uid: E:Enum::System#AI#AOAI_Tool_Invoke_Preference.Invoke_Tools_Only
+- summary: >-
+    Require manual invocation of the tool calls (i.e. the Copilot toolkit will not invoke the tools).
+
+    Does not append the tool results to the chat history.
+  name: Manual
+  uid: E:Enum::System#AI#AOAI_Tool_Invoke_Preference.Manual
+- summary: >-
+    Invoke the tool calls returned from the LLM, and send them back to the LLM until no more tool calls are returned.
+
+    Appends all the tool results to the chat history.
+  name: Automatic
+  uid: E:Enum::System#AI#AOAI_Tool_Invoke_Preference.Automatic
+commentId: O:Enum::System#AI#AOAI Tool Invoke Preference
+summary: The tool invocation preference for tool call responses.
+name: '"AOAI Tool Invoke Preference"'
+uid: O:Enum::System#AI#AOAI_Tool_Invoke_Preference

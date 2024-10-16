@@ -1,0 +1,269 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Excel."Edit in Excel"
+alId: ID 1481
+namespace: System.Integration.Excel
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration.Excel
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[Obsolete(Filters are now provided through EditinExcelFilters,22.0)]'
+    content: 'procedure EditPageInExcel(PageCaption: Text[240], PageId: Text, Filter: Text)'
+    parameters:
+    - id: PageCaption
+      description: The name of the page. This will be used for the name of the downloaded excel file, additionally the web service will be called [PageCaption]_Excel. Note if the PageCaption starts with a digit, the web service name will be WS[PageCaption]_Excel.
+      parameterType:
+        name: Text[240]
+        isExternal: true
+    - id: PageId
+      description: The ID of the page, for example, "21".
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Filter
+      description: The Business Central filter to be applied in Edit in Excel.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Creates web service for the specified page, and uses the web service to prepare and download an Excel file for the Edit in Excel functionality.
+  name: EditPageInExcel
+  obsoletion:
+    state: pending
+    reason: Filters are now provided through EditinExcelFilters
+    version: "22.0"
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel.EditPageInExcel(Text[240],Text,Text)
+- syntax:
+    content: 'procedure EditPageInExcel(PageCaption: Text[240], PageId: Integer)'
+    parameters:
+    - id: PageCaption
+      description: The name of the page. This will be used for the name of the downloaded excel file, additionally the web service will be called [PageCaption]_Excel. Note if the PageCaption starts with a digit, the web service name will be WS[PageCaption]_Excel.
+      parameterType:
+        name: Text[240]
+        isExternal: true
+    - id: PageId
+      description: The ID of the page, for example, 21.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Creates web service for the specified page, and uses the web service to prepare and download an Excel file for the Edit in Excel functionality.
+  name: EditPageInExcel
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel.EditPageInExcel(Text[240],Integer)
+- syntax:
+    content: 'procedure EditPageInExcel(PageCaption: Text[240], PageId: Integer, EditinExcelFilters: Codeunit "Edit in Excel Filters")'
+    parameters:
+    - id: PageCaption
+      description: The name of the page. This will be used for the name of the downloaded excel file, additionally the web service will be called [PageCaption]_Excel. Note if the PageCaption starts with a digit, the web service name will be WS[PageCaption]_Excel.
+      parameterType:
+        name: Text[240]
+        isExternal: true
+    - id: PageId
+      description: The ID of the page, for example, 21.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: EditinExcelFilters
+      description: The filters which will be applied to Edit in Excel.
+      parameterType:
+        internalReference: O:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters
+        name: System.Integration.Excel."Edit in Excel Filters"
+        isExternal: false
+  summary: Creates web service for the specified page, and uses the web service to prepare and download an Excel file for the Edit in Excel functionality.
+  name: EditPageInExcel
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel.EditPageInExcel(Text[240],Integer,Codeunit::System#Integration#Excel#Edit_in_Excel_Filters)
+- syntax:
+    signatures:
+    - '[Obsolete(Filters are now provided through EditinExcelFilters,22.0)]'
+    content: 'procedure EditPageInExcel(PageCaption: Text[240], PageId: Text, Filter: Text, FileName: Text)'
+    parameters:
+    - id: PageCaption
+      description: The name of the page. This will be used for the name of the downloaded excel file, if the FileName parameter is not set. Additionally, the web service will be called [PageCaption]_Excel. Note if the PageCaption starts with a digit, the web service name will be WS[PageCaption]_Excel.
+      parameterType:
+        name: Text[240]
+        isExternal: true
+    - id: PageId
+      description: The ID of the page, for example, "21".
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Filter
+      description: The Business Central filter to be applied in Edit in Excel.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileName
+      description: The name of the downloaded excel file.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Creates web service for the specified page, and uses the web service to prepare and download an Excel file for the Edit in Excel functionality.
+  name: EditPageInExcel
+  obsoletion:
+    state: pending
+    reason: Filters are now provided through EditinExcelFilters
+    version: "22.0"
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel.EditPageInExcel(Text[240],Text,Text,Text)
+- syntax:
+    content: 'procedure EditPageInExcel(PageCaption: Text[240], PageId: Integer, EditinExcelFilters: Codeunit "Edit in Excel Filters", FileName: Text)'
+    parameters:
+    - id: PageCaption
+      description: The name of the page. This will be used for the name of the downloaded excel file, if the FileName parameter is not set. Additionally, the web service will be called [PageCaption]_Excel. Note if the PageCaption starts with a digit, the web service name will be WS[PageCaption]_Excel.
+      parameterType:
+        name: Text[240]
+        isExternal: true
+    - id: PageId
+      description: The ID of the page, for example, 21.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: EditinExcelFilters
+      description: The filters which will be applied to Edit in Excel.
+      parameterType:
+        internalReference: O:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters
+        name: System.Integration.Excel."Edit in Excel Filters"
+        isExternal: false
+    - id: FileName
+      description: The name of the downloaded excel file.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Creates web service for the specified page, and uses the web service to prepare and download an Excel file for the Edit in Excel functionality.
+  name: EditPageInExcel
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel.EditPageInExcel(Text[240],Integer,Codeunit::System#Integration#Excel#Edit_in_Excel_Filters,Text)
+- syntax:
+    content: 'procedure GenerateExcelWorkBook(TenantWebService: __MissingTypeSymbol__, SearchFilter: Text)'
+    parameters:
+    - id: TenantWebService
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: SearchFilter
+      parameterType:
+        name: Text
+        isExternal: true
+  name: GenerateExcelWorkBook
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel.GenerateExcelWorkBook(__MissingSymbol__,Text)
+- syntax:
+    content: 'procedure GenerateExcelWorkBook(TenantWebService: __MissingTypeSymbol__, EditinExcelFilters: Codeunit "Edit in Excel Filters")'
+    parameters:
+    - id: TenantWebService
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: EditinExcelFilters
+      parameterType:
+        internalReference: O:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters
+        name: System.Integration.Excel."Edit in Excel Filters"
+        isExternal: false
+  name: GenerateExcelWorkBook
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel.GenerateExcelWorkBook(__MissingSymbol__,Codeunit::System#Integration#Excel#Edit_in_Excel_Filters)
+events:
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    - '[Obsolete(This event has been replaced by OnEditInExcelWithFilters,22.0)]'
+    content: 'internal procedure OnEditInExcel(ServiceName: Text[240], ODataFilter: Text, SearchFilter: Text, var Handled: Boolean)'
+    parameters:
+    - id: ServiceName
+      description: The name of the web service already created for use with Edit in Excel.
+      parameterType:
+        name: Text[240]
+        isExternal: true
+    - id: ODataFilter
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SearchFilter
+      description: The search filter of the user.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Handled
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: This event is called when Edit in Excel is invoked, accepting Filter in Text format. It allows overriding the Edit in Excel functionality.
+  name: OnEditInExcel
+  obsoletion:
+    state: pending
+    reason: This event has been replaced by OnEditInExcelWithFilters
+    version: "22.0"
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel.OnEditInExcel(Text[240],Text,Text,Boolean@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnEditInExcelWithStructuredFilter(ServiceName: Text[240], Filter: JsonObject, Payload: JsonObject, SearchFilter: Text, var Handled: Boolean)'
+    parameters:
+    - id: ServiceName
+      description: The name of the web service already created for use with Edit in Excel.
+      parameterType:
+        name: Text[240]
+        isExternal: true
+    - id: Filter
+      description: Business Central Filter to be applied in Edit in Excel.
+      parameterType:
+        name: JsonObject
+        isExternal: true
+    - id: Payload
+      description: Object binding the name of the filtered field with its EdmType
+      parameterType:
+        name: JsonObject
+        isExternal: true
+    - id: SearchFilter
+      description: The search filter of the user.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Handled
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    This event is called when Edit in Excel is invoked, handling JSON structured filters. It also allows overriding the Edit in Excel functionality.
+
+    It is however recommended to use OnEditInExcelWithFilters below if possible to avoid taking dependency on a given structure.
+  name: OnEditInExcelWithStructuredFilter
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel.OnEditInExcelWithStructuredFilter(Text[240],JsonObject,JsonObject,Text,Boolean@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnEditInExcelWithFilters(ServiceName: Text[240], var EditinExcelFilters: Codeunit "Edit in Excel Filters", SearchFilter: Text, var Handled: Boolean)'
+    parameters:
+    - id: ServiceName
+      description: The name of the web service already created for use with Edit in Excel.
+      parameterType:
+        name: Text[240]
+        isExternal: true
+    - id: EditinExcelFilters
+      description: The filters which will be applied to Edit in Excel.
+      parameterType:
+        internalReference: O:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters
+        name: System.Integration.Excel."Edit in Excel Filters"
+        isExternal: false
+    - id: SearchFilter
+      description: The search filter of the user.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Handled
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    This event is called when the Edit in Excel system action is invoked or EditInExcel is called in this codeunit.
+
+    It allows modifying filters or overriding the Edit in Excel functionality completely.
+  name: OnEditInExcelWithFilters
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel.OnEditInExcelWithFilters(Text[240],Codeunit::System#Integration#Excel#Edit_in_Excel_Filters@,Text,Boolean@)
+commentId: O:Codeunit::System#Integration#Excel#Edit in Excel
+summary: This codeunit provides an interface to running Edit in Excel for a specific page.
+name: '"Edit in Excel"'
+uid: O:Codeunit::System#Integration#Excel#Edit_in_Excel

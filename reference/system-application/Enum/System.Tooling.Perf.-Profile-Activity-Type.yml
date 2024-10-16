@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Tooling."Perf. Profile Activity Type"
+alId: ID 1932
+namespace: System.Tooling
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Tooling
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: The web client activity type
+  name: '"Web Client"'
+  uid: E:Enum::System#Tooling#Perf#_Profile_Activity_Type.Web_Client
+- summary: The background activity type
+  name: Background
+  uid: E:Enum::System#Tooling#Perf#_Profile_Activity_Type.Background
+- summary: The web api activity type
+  name: '"Web API Client"'
+  uid: E:Enum::System#Tooling#Perf#_Profile_Activity_Type.Web_API_Client
+commentId: O:Enum::System#Tooling#Perf# Profile Activity Type
+summary: The supported activity types for creating scheduled based sampling profiles
+name: '"Perf. Profile Activity Type"'
+uid: O:Enum::System#Tooling#Perf#_Profile_Activity_Type

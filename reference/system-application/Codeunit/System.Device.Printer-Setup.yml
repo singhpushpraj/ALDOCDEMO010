@@ -1,0 +1,84 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device."Printer Setup"
+alId: ID 2616
+namespace: System.Device
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+events:
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnOpenPrinterSettings(PrinterID: Text, var IsHandled: Boolean)'
+    parameters:
+    - id: PrinterID
+      description: A value that determines the printer being drilled down.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IsHandled
+      description: Stores whether the operation was successful.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Integration event that is called to view and edit the settings of a printer.
+
+    Subscribe to this event if you want to introduce user configurable settings for a printer.
+  name: OnOpenPrinterSettings
+  uid: M:Codeunit::System#Device#Printer_Setup.OnOpenPrinterSettings(Text,Boolean@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnSetAsDefaultPrinter(PrinterID: Text, UserID: Text, var IsHandled: Boolean)'
+    parameters:
+    - id: PrinterID
+      description: A value that determines the printer being set as default.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: UserID
+      description: A value that determines the user for whom the printer is being set as default. Empty value implies all users.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IsHandled
+      description: Stores whether the operation was successful.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Integration event that is called to set the default printer for all reports.
+     Subscribe to this event to specify a value in the Printer Name field and leave the User ID and Report ID fields blank in Printers Selection.
+  name: OnSetAsDefaultPrinter
+  uid: M:Codeunit::System#Device#Printer_Setup.OnSetAsDefaultPrinter(Text,Text,Boolean@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure GetPrinterSelectionsPage(var PageID: Integer, var IsHandled: Boolean)'
+    parameters:
+    - id: PageID
+      description: An out value that determines the id of the Printer Selection page.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: IsHandled
+      description: Stores whether the operation was successful.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Integration event that is called to get the page ID of the Printer Selection page.
+  name: GetPrinterSelectionsPage
+  uid: M:Codeunit::System#Device#Printer_Setup.GetPrinterSelectionsPage(Integer@,Boolean@)
+commentId: O:Codeunit::System#Device#Printer Setup
+summary: Exposes functionality to manage printer settings.
+name: '"Printer Setup"'
+uid: O:Codeunit::System#Device#Printer_Setup

@@ -1,0 +1,305 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Feature Management Facade"
+alId: ID 2611
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsEnabled(FeatureId: Text[50]): Boolean'
+    parameters:
+    - id: FeatureId
+      description: the feature id in the system table "Feature Key"
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    return:
+      description: if the feature is fully enabled
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Returns true if the feature is enabled and data update, if required, is complete.
+  name: IsEnabled
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.IsEnabled(Text[50]):Boolean
+- syntax:
+    content: 'procedure IsEnabled(FeatureId: Text[50], AllowInsert: Boolean): Boolean'
+    parameters:
+    - id: FeatureId
+      description: the feature id in the system table "Feature Key"
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    - id: AllowInsert
+      description: specifies if inserts are allowed while checking for feature being enabled
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: if the feature is fully enabled
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Returns true if the feature is enabled and data update, if required, is complete.
+  name: IsEnabled
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.IsEnabled(Text[50],Boolean):Boolean
+- syntax:
+    content: 'procedure AfterValidateEnabled(FeatureKey: __MissingTypeSymbol__)'
+    parameters:
+    - id: FeatureKey
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: AfterValidateEnabled
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.AfterValidateEnabled(__MissingSymbol__)
+- syntax:
+    content: 'procedure GetFeatureKeyUrlForWeb(FeatureKey: Text[50]): Text'
+    parameters:
+    - id: FeatureKey
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Gets the URL to let users try out a feature.
+
+    <param name="FeatureKey">The feature key for the feature to try.</param>
+  name: GetFeatureKeyUrlForWeb
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.GetFeatureKeyUrlForWeb(Text[50]):Text
+- syntax:
+    content: 'procedure GetImplementation(FeatureDataUpdateStatus: Record "Feature Data Update Status"): Boolean'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Returns true if the feature has an interface implementation.
+  name: GetImplementation
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.GetImplementation(Feature_Data_Update_Status):Boolean
+- syntax:
+    content: 'procedure GetTaskDescription(FeatureDataUpdateStatus: Record "Feature Data Update Status"): Text'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Retrurns the result of the interface's GetTaskDescription method.
+  name: GetTaskDescription
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.GetTaskDescription(Feature_Data_Update_Status):Text
+- syntax:
+    content: 'procedure ReviewData(FeatureDataUpdateStatus: Record "Feature Data Update Status"): Boolean'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Runs the interface's review data method.
+  name: ReviewData
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.ReviewData(Feature_Data_Update_Status):Boolean
+- syntax:
+    content: 'procedure Update(var FeatureDataUpdateStatus: Record "Feature Data Update Status"): Boolean'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      description: The current status record
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    return:
+      description: true if user picked Update or Schedule and the task is scheduled or executed.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Schedules or starts update depending on the options picked on the wizard page.
+  name: Update
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.Update(Feature_Data_Update_Status@):Boolean
+- syntax:
+    content: 'procedure CancelTask(var FeatureDataUpdateStatus: Record "Feature Data Update Status", ClearStartDateTime: Boolean)'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    - id: ClearStartDateTime
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Cancels the scheduled task before it is started.
+  name: CancelTask
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.CancelTask(Feature_Data_Update_Status@,Boolean)
+- syntax:
+    content: 'procedure UpdateData(var FeatureDataUpdateStatus: Record "Feature Data Update Status")'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+  summary: Runs the interface's data updata method and updates the feature status.
+  name: UpdateData
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.UpdateData(Feature_Data_Update_Status@)
+events:
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnAfterUpdateData(var FeatureDataUpdateStatus: Record "Feature Data Update Status")'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+  name: OnAfterUpdateData
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.OnAfterUpdateData(Feature_Data_Update_Status@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnBeforeUpdateData(var FeatureDataUpdateStatus: Record "Feature Data Update Status")'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+  name: OnBeforeUpdateData
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.OnBeforeUpdateData(Feature_Data_Update_Status@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnBeforeScheduleTask(FeatureDataUpdateStatus: Record "Feature Data Update Status", var DoNotScheduleTask: Boolean, var TaskId: Guid)'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    - id: DoNotScheduleTask
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: TaskId
+      parameterType:
+        name: Guid
+        isExternal: true
+  name: OnBeforeScheduleTask
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.OnBeforeScheduleTask(Feature_Data_Update_Status,Boolean@,Guid@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnGetImplementation(FeatureDataUpdateStatus: Record "Feature Data Update Status", var FeatureDataUpdate: Interface "Feature Data Update", var ImplementedId: Text[50])'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    - id: FeatureDataUpdate
+      parameterType:
+        internalReference: O:Interface::System#Environment#Configuration#Feature_Data_Update
+        name: System.Environment.Configuration."Feature Data Update"
+        isExternal: false
+    - id: ImplementedId
+      parameterType:
+        name: Text[50]
+        isExternal: true
+  name: OnGetImplementation
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.OnGetImplementation(Feature_Data_Update_Status,Interface::System#Environment#Configuration#Feature_Data_Update@,Text[50]@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnShowTaskLog(FeatureDataUpdateStatus: Record "Feature Data Update Status")'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+  name: OnShowTaskLog
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.OnShowTaskLog(Feature_Data_Update_Status)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnInitializeFeatureDataUpdateStatus(var FeatureDataUpdateStatus: Record "Feature Data Update Status", var InitializeHandled: Boolean)'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    - id: InitializeHandled
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: OnInitializeFeatureDataUpdateStatus
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.OnInitializeFeatureDataUpdateStatus(Feature_Data_Update_Status@,Boolean@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnAfterFeatureEnableConfirmed(FeatureKey: __MissingTypeSymbol__)'
+    parameters:
+    - id: FeatureKey
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: OnAfterFeatureEnableConfirmed
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.OnAfterFeatureEnableConfirmed(__MissingSymbol__@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnAfterFeatureDisableConfirmed(FeatureKey: __MissingTypeSymbol__)'
+    parameters:
+    - id: FeatureKey
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: OnAfterFeatureDisableConfirmed
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.OnAfterFeatureDisableConfirmed(__MissingSymbol__)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnBeforeSetFeatureStatusForOtherCompanies(var FeatureDataUpdateStatus: Record "Feature Data Update Status", var IsHandled: Boolean)'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    - id: IsHandled
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: OnBeforeSetFeatureStatusForOtherCompanies
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.OnBeforeSetFeatureStatusForOtherCompanies(Feature_Data_Update_Status@,Boolean@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnBeforeOpenFeatureManagement(var FeatureManagementPageID: Integer, var IsHandled: Boolean)'
+    parameters:
+    - id: FeatureManagementPageID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: IsHandled
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: OnBeforeOpenFeatureManagement
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.OnBeforeOpenFeatureManagement(Integer@,Boolean@)
+commentId: O:Codeunit::System#Environment#Configuration#Feature Management Facade
+summary: This codeunit provides public functions for feature management.
+name: '"Feature Management Facade"'
+uid: O:Codeunit::System#Environment#Configuration#Feature_Management_Facade

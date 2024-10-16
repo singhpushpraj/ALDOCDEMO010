@@ -1,0 +1,38 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."AOAI Function Response Status"
+alId: ID 7777
+namespace: System.AI
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: The function has not been invoked.
+  name: '"Not Invoked"'
+  uid: E:Enum::System#AI#AOAI_Function_Response_Status.Not_Invoked
+- summary: The function was invoked and completed without error.
+  name: '"Invoke Success"'
+  uid: E:Enum::System#AI#AOAI_Function_Response_Status.Invoke_Success
+- summary: The function was invoked and completed with error.
+  name: '"Invoke Error"'
+  uid: E:Enum::System#AI#AOAI_Function_Response_Status.Invoke_Error
+- summary: The requested function could not be found.
+  name: '"Function Not Found"'
+  uid: E:Enum::System#AI#AOAI_Function_Response_Status.Function_Not_Found
+- summary: The requested function was invalid.
+  name: '"Function Invalid"'
+  uid: E:Enum::System#AI#AOAI_Function_Response_Status.Function_Invalid
+commentId: O:Enum::System#AI#AOAI Function Response Status
+summary: The status of the function response.
+name: '"AOAI Function Response Status"'
+uid: O:Enum::System#AI#AOAI_Function_Response_Status

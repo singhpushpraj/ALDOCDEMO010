@@ -1,0 +1,201 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Tooling."Scheduled Perf. Profiler"
+alId: ID 1931
+namespace: System.Tooling
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Tooling
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure ValidatePerformanceProfileSchedulerDates(PerformanceProfileScheduler: __MissingTypeSymbol__, MaxRetentionPeriod: Duration)'
+    parameters:
+    - id: PerformanceProfileScheduler
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: MaxRetentionPeriod
+      parameterType:
+        name: Duration
+        isExternal: true
+  name: ValidatePerformanceProfileSchedulerDates
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.ValidatePerformanceProfileSchedulerDates(__MissingSymbol__,Duration)
+- syntax:
+    content: 'procedure ValidatePerformanceProfileSchedulerDatesRelation(PerformanceProfileScheduler: __MissingTypeSymbol__)'
+    parameters:
+    - id: PerformanceProfileScheduler
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: ValidatePerformanceProfileSchedulerDatesRelation
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.ValidatePerformanceProfileSchedulerDatesRelation(__MissingSymbol__)
+- syntax:
+    content: 'procedure ValidatePerformanceProfileEndTime(PerformanceProfileScheduler: __MissingTypeSymbol__)'
+    parameters:
+    - id: PerformanceProfileScheduler
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: ValidatePerformanceProfileEndTime
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.ValidatePerformanceProfileEndTime(__MissingSymbol__)
+- syntax:
+    content: 'procedure MapActivityTypeToRecord(PerformanceProfileScheduler: __MissingTypeSymbol__, ActivityType: Enum "Perf. Profile Activity Type")'
+    parameters:
+    - id: PerformanceProfileScheduler
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: ActivityType
+      parameterType:
+        internalReference: O:Enum::System#Tooling#Perf#_Profile_Activity_Type
+        name: System.Tooling."Perf. Profile Activity Type"
+        isExternal: false
+  name: MapActivityTypeToRecord
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.MapActivityTypeToRecord(__MissingSymbol__@,Enum::System#Tooling#Perf#_Profile_Activity_Type)
+- syntax:
+    content: 'procedure MapRecordToActivityType(PerformanceProfileScheduler: __MissingTypeSymbol__, var ActivityType: Enum "Perf. Profile Activity Type")'
+    parameters:
+    - id: PerformanceProfileScheduler
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: ActivityType
+      parameterType:
+        internalReference: O:Enum::System#Tooling#Perf#_Profile_Activity_Type
+        name: System.Tooling."Perf. Profile Activity Type"
+        isExternal: false
+  name: MapRecordToActivityType
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.MapRecordToActivityType(__MissingSymbol__,Enum::System#Tooling#Perf#_Profile_Activity_Type@)
+- syntax:
+    content: 'procedure FilterUsers(PerformanceProfileScheduler: __MissingTypeSymbol__, SecurityID: Guid)'
+    parameters:
+    - id: PerformanceProfileScheduler
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: SecurityID
+      parameterType:
+        name: Guid
+        isExternal: true
+  name: FilterUsers
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.FilterUsers(__MissingSymbol__@,Guid)
+- syntax:
+    content: 'procedure FilterUsers(PerformanceProfileScheduler: __MissingTypeSymbol__, SecurityID: Guid, ForceFilterToUser: Boolean)'
+    parameters:
+    - id: PerformanceProfileScheduler
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: SecurityID
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ForceFilterToUser
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: FilterUsers
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.FilterUsers(__MissingSymbol__@,Guid,Boolean)
+- syntax:
+    content: 'procedure ValidateScheduleCreationPermissions(UserID: Guid, ScheduleUserId: Guid)'
+    parameters:
+    - id: UserID
+      description: The current user ID.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ScheduleUserId
+      description: The schedule user ID.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Returns true if the user can make schedules for other users.
+  name: ValidateScheduleCreationPermissions
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.ValidateScheduleCreationPermissions(Guid,Guid)
+- syntax:
+    content: 'procedure MapRecordToUserName(PerformanceProfileScheduler: __MissingTypeSymbol__): Text'
+    parameters:
+    - id: PerformanceProfileScheduler
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: MapRecordToUserName
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.MapRecordToUserName(__MissingSymbol__):Text
+- syntax:
+    content: 'procedure InitializeFields(PerformanceProfileScheduler: __MissingTypeSymbol__, var ActivityType: Enum "Perf. Profile Activity Type")'
+    parameters:
+    - id: PerformanceProfileScheduler
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: ActivityType
+      parameterType:
+        internalReference: O:Enum::System#Tooling#Perf#_Profile_Activity_Type
+        name: System.Tooling."Perf. Profile Activity Type"
+        isExternal: false
+  name: InitializeFields
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.InitializeFields(__MissingSymbol__@,Enum::System#Tooling#Perf#_Profile_Activity_Type@)
+- syntax:
+    content: 'procedure ValidatePerformanceProfileSchedulerRecord(PerformanceProfileScheduler: __MissingTypeSymbol__, ActivityType: Enum "Perf. Profile Activity Type")'
+    parameters:
+    - id: PerformanceProfileScheduler
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: ActivityType
+      parameterType:
+        internalReference: O:Enum::System#Tooling#Perf#_Profile_Activity_Type
+        name: System.Tooling."Perf. Profile Activity Type"
+        isExternal: false
+  name: ValidatePerformanceProfileSchedulerRecord
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.ValidatePerformanceProfileSchedulerRecord(__MissingSymbol__,Enum::System#Tooling#Perf#_Profile_Activity_Type)
+- syntax:
+    content: 'procedure GetRetentionPeriod(): Code[20]'
+    return:
+      description: The retention period
+      returnType:
+        name: Code[20]
+        isExternal: true
+  summary: Gets the retention period for performance profiles
+  name: GetRetentionPeriod
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.GetRetentionPeriod:Code[20]
+- syntax:
+    content: 'procedure ValidateThreshold(PerformanceProfileScheduler: __MissingTypeSymbol__)'
+    parameters:
+    - id: PerformanceProfileScheduler
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: ValidateThreshold
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.ValidateThreshold(__MissingSymbol__@)
+- syntax:
+    content: 'procedure IsProfilingEnabled(var ScheduleID: Guid): Boolean'
+    parameters:
+    - id: ScheduleID
+      description: The schedule ID that triggers the profiling.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if profiling is enabled, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Returns true if profiling is enabled for the session.
+  name: IsProfilingEnabled
+  uid: M:Codeunit::System#Tooling#Scheduled_Perf#_Profiler.IsProfilingEnabled(Guid@):Boolean
+commentId: O:Codeunit::System#Tooling#Scheduled Perf# Profiler
+summary: Provides implementation details for working on the Perf. Profiler Schedules list and card pages.
+name: '"Scheduled Perf. Profiler"'
+uid: O:Codeunit::System#Tooling#Scheduled_Perf#_Profiler

@@ -1,0 +1,111 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Inbox"
+alId: ID 8886
+namespace: System.Email
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+fields:
+- type:
+    name: BigInteger
+    isExternal: true
+  name: Id
+  uid: F:Table::System#Email#Email_Inbox.Id
+- type:
+    name: Guid
+    isExternal: true
+  name: '"Message Id"'
+  uid: F:Table::System#Email#Email_Inbox.Message_Id
+- type:
+    name: Guid
+    isExternal: true
+  name: '"Account Id"'
+  uid: F:Table::System#Email#Email_Inbox.Account_Id
+- type:
+    internalReference: O:Enum::System#Email#Email_Connector
+    name: System.Email."Email Connector"
+    isExternal: false
+  name: Connector
+  uid: F:Table::System#Email#Email_Inbox.Connector
+- type:
+    name: Guid
+    isExternal: true
+  name: '"User Security Id"'
+  uid: F:Table::System#Email#Email_Inbox.User_Security_Id
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: Description
+  uid: F:Table::System#Email#Email_Inbox.Description[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Conversation Id"'
+  uid: F:Table::System#Email#Email_Inbox.Conversation_Id[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"External Message Id"'
+  uid: F:Table::System#Email#Email_Inbox.External_Message_Id[2048]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Sender Name"'
+  uid: F:Table::System#Email#Email_Inbox.Sender_Name[250]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Sender Address"'
+  uid: F:Table::System#Email#Email_Inbox.Sender_Address[250]
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Received DateTime"'
+  uid: F:Table::System#Email#Email_Inbox.Received_DateTime
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Sent DateTime"'
+  uid: F:Table::System#Email#Email_Inbox.Sent_DateTime
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Email#Email_Inbox.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Email#Email_Inbox.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Email#Email_Inbox.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Email#Email_Inbox.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Email#Email_Inbox.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Email#Email_Inbox.SystemRowVersion
+commentId: O:Table::System#Email#Email Inbox
+summary: Holds information about emails retrieved from an inbox.
+name: '"Email Inbox"'
+uid: O:Table::System#Email#Email_Inbox

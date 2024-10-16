@@ -1,0 +1,93 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DateTime."Unix Timestamp"
+alId: ID 8722
+namespace: System.DateTime
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DateTime
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure CreateTimestampSeconds(): BigInteger'
+    return:
+      description: A Unix timestamp in seconds representing the current date and time
+      returnType:
+        name: BigInteger
+        isExternal: true
+  summary: Create a Unix timestamp in seconds for the current date and time
+  name: CreateTimestampSeconds
+  uid: M:Codeunit::System#DateTime#Unix_Timestamp.CreateTimestampSeconds:BigInteger
+- syntax:
+    content: 'procedure CreateTimestampSeconds(DateTimeFrom: DateTime): BigInteger'
+    parameters:
+    - id: DateTimeFrom
+      description: The DateTime that should be used to create the Unix timestamp
+      parameterType:
+        name: DateTime
+        isExternal: true
+    return:
+      description: A Unix timestamp in seconds representing the specified date and time
+      returnType:
+        name: BigInteger
+        isExternal: true
+  summary: Create a Unix timestamp in seconds for the specified date and time
+  name: CreateTimestampSeconds
+  uid: M:Codeunit::System#DateTime#Unix_Timestamp.CreateTimestampSeconds(DateTime):BigInteger
+- syntax:
+    content: 'procedure CreateTimestampMilliseconds(): BigInteger'
+    return:
+      description: A Unix timestamp in milliseconds representing the current date and time
+      returnType:
+        name: BigInteger
+        isExternal: true
+  summary: Create a Unix timestamp in milliseconds for the current date and time
+  name: CreateTimestampMilliseconds
+  uid: M:Codeunit::System#DateTime#Unix_Timestamp.CreateTimestampMilliseconds:BigInteger
+- syntax:
+    content: 'procedure CreateTimestampMilliseconds(DateTimeFrom: DateTime): BigInteger'
+    parameters:
+    - id: DateTimeFrom
+      description: The DateTime that should be used to create the Unix timestamp
+      parameterType:
+        name: DateTime
+        isExternal: true
+    return:
+      description: A Unix timestamp in milliseconds representing the specified date and time
+      returnType:
+        name: BigInteger
+        isExternal: true
+  summary: Create a Unix timestamp in milliseconds for the specified date and time
+  name: CreateTimestampMilliseconds
+  uid: M:Codeunit::System#DateTime#Unix_Timestamp.CreateTimestampMilliseconds(DateTime):BigInteger
+- syntax:
+    content: 'procedure EvaluateTimestamp(Timestamp: BigInteger): DateTime'
+    parameters:
+    - id: Timestamp
+      description: The Unix timestamp that should be evaluated to a DateTime
+      parameterType:
+        name: BigInteger
+        isExternal: true
+    return:
+      description: The evaluated DateTime
+      returnType:
+        name: DateTime
+        isExternal: true
+  summary: Evaluate a Unix timestamp to a DateTime
+  name: EvaluateTimestamp
+  uid: M:Codeunit::System#DateTime#Unix_Timestamp.EvaluateTimestamp(BigInteger):DateTime
+commentId: O:Codeunit::System#DateTime#Unix Timestamp
+name: '"Unix Timestamp"'
+uid: O:Codeunit::System#DateTime#Unix_Timestamp

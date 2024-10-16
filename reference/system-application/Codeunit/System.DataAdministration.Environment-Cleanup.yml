@@ -1,0 +1,67 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Environment Cleanup"
+alId: ID 1886
+namespace: System.DataAdministration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+events:
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnClearCompanyConfig(CompanyName: Text, SourceEnv: Enum "Environment Type", DestinationEnv: Enum "Environment Type")'
+    parameters:
+    - id: CompanyName
+      description: The name of the company.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceEnv
+      parameterType:
+        internalReference: O:Enum::System#DataAdministration#Environment_Type
+        name: System.DataAdministration."Environment Type"
+        isExternal: false
+    - id: DestinationEnv
+      parameterType:
+        internalReference: O:Enum::System#DataAdministration#Environment_Type
+        name: System.DataAdministration."Environment Type"
+        isExternal: false
+  summary: Subscribe to this event to clean up company-specific data when copying to a new environment.
+  name: OnClearCompanyConfig
+  uid: M:Codeunit::System#DataAdministration#Environment_Cleanup.OnClearCompanyConfig(Text,Enum::System#DataAdministration#Environment_Type,Enum::System#DataAdministration#Environment_Type)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'internal procedure OnClearDatabaseConfig(SourceEnv: Enum "Environment Type", DestinationEnv: Enum "Environment Type")'
+    parameters:
+    - id: SourceEnv
+      parameterType:
+        internalReference: O:Enum::System#DataAdministration#Environment_Type
+        name: System.DataAdministration."Environment Type"
+        isExternal: false
+    - id: DestinationEnv
+      parameterType:
+        internalReference: O:Enum::System#DataAdministration#Environment_Type
+        name: System.DataAdministration."Environment Type"
+        isExternal: false
+  summary: Subscribe to this event to clean up environment-specific data when copying to a new environment.
+  name: OnClearDatabaseConfig
+  uid: M:Codeunit::System#DataAdministration#Environment_Cleanup.OnClearDatabaseConfig(Enum::System#DataAdministration#Environment_Type,Enum::System#DataAdministration#Environment_Type)
+commentId: O:Codeunit::System#DataAdministration#Environment Cleanup
+summary: Codeunit that raises an event that could be used to clean up data when copying a company to new environment.
+name: '"Environment Cleanup"'
+uid: O:Codeunit::System#DataAdministration#Environment_Cleanup

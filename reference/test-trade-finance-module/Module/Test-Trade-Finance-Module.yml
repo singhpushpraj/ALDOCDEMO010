@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: Test Trade Finance Module by Test Sverige AB (1.2.0.2)
+baseKind: Module
+kind: Module
+objectProperties:
+- name: Version
+  value: 1.2.0.2
+  promoted: false
+- name: Publisher
+  value: Test Sverige AB
+  promoted: false
+summary: ""
+name: Test Trade Finance Module
+uid: N:Module::Test_Trade_Finance_Module

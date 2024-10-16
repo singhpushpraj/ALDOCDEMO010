@@ -1,0 +1,106 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."AOAI Function Response"
+alId: ID 7758
+namespace: System.AI
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsSuccess(): Boolean'
+    return:
+      description: True if the call was successful, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Get whether the function call was successful.
+  name: IsSuccess
+  uid: M:Codeunit::System#AI#AOAI_Function_Response.IsSuccess:Boolean
+- syntax:
+    content: 'procedure GetStatus(): Enum "AOAI Function Response Status"'
+    return:
+      description: The function response status
+      returnType:
+        internalReference: O:Enum::System#AI#AOAI_Function_Response_Status
+        name: System.AI."AOAI Function Response Status"
+        isExternal: false
+  summary: Gets the function response status.
+  name: GetStatus
+  uid: M:Codeunit::System#AI#AOAI_Function_Response.GetStatus:Enum::System#AI#AOAI_Function_Response_Status
+- syntax:
+    content: 'procedure GetResult(): Variant'
+    return:
+      description: The return value from the function
+      returnType:
+        name: Variant
+        isExternal: true
+  summary: Get the return value of the function that was called.
+  name: GetResult
+  uid: M:Codeunit::System#AI#AOAI_Function_Response.GetResult:Variant
+- syntax:
+    content: 'procedure GetArguments(): JsonObject'
+    return:
+      description: The arguments for the function
+      returnType:
+        name: JsonObject
+        isExternal: true
+  summary: Get the arguments for the function call.
+  name: GetArguments
+  uid: M:Codeunit::System#AI#AOAI_Function_Response.GetArguments:JsonObject
+- syntax:
+    content: 'procedure GetError(): Text'
+    return:
+      description: The error message from the function.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Get the error message from the function that was called.
+  name: GetError
+  uid: M:Codeunit::System#AI#AOAI_Function_Response.GetError:Text
+- syntax:
+    content: 'procedure GetFunctionName(): Text'
+    return:
+      description: The name of the function that was called.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Get the name of the function that was called.
+  name: GetFunctionName
+  uid: M:Codeunit::System#AI#AOAI_Function_Response.GetFunctionName:Text
+- syntax:
+    content: 'procedure GetFunctionId(): Text'
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Get the id of the function that was called.
+  name: GetFunctionId
+  uid: M:Codeunit::System#AI#AOAI_Function_Response.GetFunctionId:Text
+- syntax:
+    content: 'procedure GetErrorCallstack(): Text'
+    return:
+      description: The error call stack from the function.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Get the error call stack from the function that was called.
+  name: GetErrorCallstack
+  uid: M:Codeunit::System#AI#AOAI_Function_Response.GetErrorCallstack:Text
+commentId: O:Codeunit::System#AI#AOAI Function Response
+summary: The status and result of an functions.
+name: '"AOAI Function Response"'
+uid: O:Codeunit::System#AI#AOAI_Function_Response
